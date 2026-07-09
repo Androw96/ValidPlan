@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="meta.title">ValidPlan | Hídtervezés és építőipari mérnöki tervezés</title>
+    <link rel="icon" href="logo.jpeg" />
+    <meta
+      name="description"
+      content="ValidPlan - modern építőipari tervezés, hídtervezés, statikai koncepciók és műszaki dokumentáció."
+      data-i18n-attr="content:meta.description"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260709-6" />
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand is-current" href="index.html" aria-label="ValidPlan főoldal" data-i18n-attr="aria-label:brand.aria">
+        <img src="logo-nav.png" alt="ValidPlan logó" />
+      </a>
+      <nav class="nav-links" aria-label="Fő navigáció" data-i18n-attr="aria-label:nav.aria">
+        <a href="expertise.html" data-i18n="nav.expertise">Szakértelem</a>
+        <a href="bridges.html" data-i18n="nav.bridges">Hidak</a>
+        <a href="process.html" data-i18n="nav.process">Folyamat</a>
+        <a href="contact.html" data-i18n="nav.contact">Kapcsolat</a>
+      </nav>
+      <div class="language-switch" aria-label="Nyelvválasztó" data-i18n-attr="aria-label:lang.aria">
+        <button type="button" data-lang="hu" class="is-active">HU</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="de">DE</button>
+      </div>
+      <a class="header-action" href="contact.html" data-i18n="nav.cta">Ajánlatkérés</a>
+      <button class="menu-button" type="button" aria-label="Menü megnyitása" aria-expanded="false" data-i18n-attr="aria-label:menu.open">
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero section-grid">
+        <div class="blueprint-layer" aria-hidden="true">
+          <span class="measure-line line-a"></span>
+          <span class="measure-line line-b"></span>
+          <span class="measure-line line-c"></span>
+        </div>
+
+        <div class="hero-content reveal">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Építőipari és hídtervezési mérnökiroda</p>
+          <h1 class="brand-title" aria-label="ValidPlan">
+            <span class="brand-title-valid">Valid</span><span class="brand-title-plan">Plan</span>
+          </h1>
+          <p class="hero-copy" data-i18n="hero.copy">
+            Precíz, átlátható és kivitelezhető tervek hidakhoz, műtárgyakhoz és összetett
+            építőipari projektekhez.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="contact.html" data-i18n="hero.primary">Projekt indítása</a>
+            <a class="ghost-button" href="expertise.html" data-i18n="hero.secondary">Tervezési területek</a>
+          </div>
+          <div class="hero-proof" aria-label="Tervezési alapelvek" data-i18n-attr="aria-label:hero.proofAria">
+            <span data-i18n="hero.proof1">Eurocode szemlélet</span>
+            <span data-i18n="hero.proof2">Kivitelezhető részletek</span>
+            <span data-i18n="hero.proof3">Átlátható dokumentáció</span>
+          </div>
+        </div>
+
+        <div class="bridge-board reveal" aria-label="Blueprint híd illusztráció" data-i18n-attr="aria-label:bridge.aria">
+          <div class="board-header">
+            <span>VP-042</span>
+            <span data-i18n="bridge.header">HÍD TERV</span>
+          </div>
+          <div class="bridge-scene">
+            <div class="scan-line"></div>
+            <svg class="bridge-drawing" viewBox="0 0 720 420" role="img" aria-labelledby="bridgeTitle bridgeDesc">
+              <title id="bridgeTitle">Ívhíd tervrajz</title>
+              <desc id="bridgeDesc">Méretezett ívhíd blueprint rajz pályalemezzel, pillérekkel, függesztőkkel és méretvonalakkal.</desc>
+              <g class="terrain">
+                <path d="M36 334 C116 318 178 340 254 326 C326 312 402 342 482 323 C568 302 628 325 686 314" />
+                <path d="M42 356 L678 356" />
+              </g>
+              <g class="structure">
+                <path class="arch-main" d="M112 247 C154 102 566 102 608 247" />
+                <path class="arch-inner" d="M136 247 C180 139 540 139 584 247" />
+                <path class="deck" d="M78 257 L642 257" />
+                <path class="deck-secondary" d="M91 276 L629 276" />
+                <path class="abutment" d="M96 257 L96 304 M624 257 L624 304" />
+                <path class="pier" d="M172 276 L172 363 M360 276 L360 370 M548 276 L548 363" />
+                <path class="bearing" d="M155 276 L189 276 M343 276 L377 276 M531 276 L565 276" />
+                <path class="hanger" d="M176 156 L154 257 M250 133 L238 257 M324 122 L322 257 M396 122 L398 257 M470 133 L482 257 M544 156 L566 257" />
+                <path class="crossbrace" d="M154 257 L238 133 M238 257 L322 122 M398 257 L482 133 M482 257 L566 156" />
+              </g>
+              <g class="dimension-lines">
+                <path d="M98 82 L622 82 M98 72 L98 92 M622 72 L622 92" />
+                <path d="M664 122 L664 354 M654 122 L674 122 M654 354 L674 354" />
+                <path d="M360 46 L360 386" />
+              </g>
+              <g class="detail-circles">
+                <circle cx="172" cy="276" r="16" />
+                <circle cx="360" cy="276" r="16" />
+                <circle cx="548" cy="276" r="16" />
+              </g>
+            </svg>
+            <div class="dimension dimension-top">42.80 m</div>
+            <div class="dimension dimension-side" data-i18n="bridge.axis">tervezési tengely</div>
+            <div class="dimension dimension-note" data-i18n="bridge.note">ív + pályalemez csomópont</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats reveal" aria-label="ValidPlan erősségek">
+        <div>
+          <strong>01</strong>
+          <span data-i18n="stats.one">Koncepció és előtervezés</span>
+        </div>
+        <div>
+          <strong>02</strong>
+          <span data-i18n="stats.two">Statikai és kiviteli terv</span>
+        </div>
+        <div>
+          <strong>03</strong>
+          <span data-i18n="stats.three">Műszaki támogatás a kivitelezésig</span>
+        </div>
+      </section>
+
+      <section class="showcase section-pad">
+        <div class="showcase-copy reveal">
+          <p class="eyebrow" data-i18n="showcase.eyebrow">Blueprint szemlélet</p>
+          <h2 data-i18n="showcase.title">Minden vonalnak oka van.</h2>
+          <p data-i18n="showcase.copy">
+            A ValidPlan látványos, de fegyelmezett tervezési folyamatot képvisel: a forma,
+            a statika és a kivitelezhetőség ugyanabban a tervben találkozik.
+          </p>
+        </div>
+        <div class="technical-panel reveal">
+          <div class="panel-row">
+            <span data-i18n="panel.row1.label">fesztáv</span>
+            <strong>18-85 m</strong>
+          </div>
+          <div class="panel-row">
+            <span data-i18n="panel.row2.label">anyag</span>
+            <strong data-i18n="panel.row2.value">acél / vasbeton</strong>
+          </div>
+          <div class="panel-row">
+            <span data-i18n="panel.row3.label">kimenet</span>
+            <strong data-i18n="panel.row3.value">engedélyezési + kiviteli terv</strong>
+          </div>
+          <div class="panel-row">
+            <span data-i18n="panel.row4.label">ellenőrzés</span>
+            <strong data-i18n="panel.row4.value">teherút + részlet + ütemezés</strong>
+          </div>
+          <div class="progress-track">
+            <span></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section-pad reveal">
+        <div>
+          <p class="eyebrow" data-i18n="contact.eyebrow">Kapcsolat</p>
+          <h2 data-i18n="contact.title">Kezdjük el a következő híd tervét.</h2>
+        </div>
+        <a class="primary-button" href="mailto:info@validplan.hu">info@validplan.hu</a>
+      </section>
+    </main>
+
+    <script src="script.js?v=20260709-5"></script>
+  </body>
+</html>
