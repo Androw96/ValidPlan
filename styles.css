@@ -614,6 +614,10 @@ h3 {
   inset: 10px;
   display: grid;
   place-items: center;
+  border: 1px solid rgba(201, 244, 255, 0.18);
+  background:
+    radial-gradient(circle at 50% 48%, rgba(0, 112, 255, 0.24), transparent 62%),
+    linear-gradient(135deg, rgba(0, 88, 207, 0.82), rgba(0, 38, 112, 0.96));
   overflow: hidden;
   isolation: isolate;
 }
@@ -623,9 +627,11 @@ h3 {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: url("validplan-blueprint-plan.png") center / contain no-repeat;
-  opacity: 0.24;
-  filter: saturate(1.18) contrast(1.12) brightness(1.05);
+  background:
+    linear-gradient(rgba(201, 244, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 244, 255, 0.06) 1px, transparent 1px);
+  background-size: 16px 16px;
+  opacity: 0.8;
 }
 
 .plan-drawing img {
@@ -646,8 +652,9 @@ h3 {
     contrast(1.35)
     brightness(1.28)
     drop-shadow(0 0 10px rgba(191, 240, 255, 0.7));
+  opacity: 0;
   clip-path: inset(0 100% 0 0);
-  animation: revealPlan 3.8s cubic-bezier(0.18, 0.84, 0.24, 1) forwards;
+  animation: revealPlan 4.4s cubic-bezier(0.18, 0.84, 0.24, 1) forwards;
 }
 
 .plan-drawing-trace::after {
@@ -659,7 +666,7 @@ h3 {
   width: 70px;
   background: linear-gradient(90deg, transparent, rgba(214, 249, 255, 0.42), transparent);
   mix-blend-mode: screen;
-  animation: traceGlow 3.8s cubic-bezier(0.18, 0.84, 0.24, 1) forwards;
+  animation: traceGlow 4.4s cubic-bezier(0.18, 0.84, 0.24, 1) forwards;
 }
 
 .plan-drawing-grid {
@@ -1109,8 +1116,18 @@ html[lang="de"] .page-hero h1 {
 }
 
 @keyframes revealPlan {
-  0% { clip-path: inset(0 100% 0 0); }
-  100% { clip-path: inset(0 0 0 0); }
+  0% {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+  }
+  6% {
+    opacity: 1;
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 @keyframes traceGlow {
