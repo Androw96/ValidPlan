@@ -1293,6 +1293,426 @@ html[lang="de"] .page-hero h1 {
   }
 }
 
+@media (max-width: 700px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    background-size: 42px 42px, 42px 42px, 10px 10px, 10px 10px;
+  }
+
+  .cursor-glow,
+  .blueprint-layer {
+    display: none;
+  }
+
+  .site-header {
+    top: 10px;
+    width: calc(100% - 20px);
+    grid-template-columns: minmax(104px, 124px) auto auto;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .brand {
+    width: 124px;
+    height: 42px;
+    padding: 5px 7px;
+  }
+
+  .language-switch {
+    gap: 1px;
+    padding: 2px;
+  }
+
+  .language-switch button {
+    min-width: 28px;
+    height: 30px;
+    font-size: 0.68rem;
+  }
+
+  .menu-button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .site-header.menu-open .nav-links {
+    top: calc(100% + 8px);
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 8px;
+  }
+
+  .site-header.menu-open .nav-links a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom: 1px solid rgba(201, 244, 255, 0.12);
+  }
+
+  .section-grid,
+  .section-pad,
+  .stats,
+  .page-main {
+    width: min(100% - 22px, 1180px);
+  }
+
+  .hero {
+    min-height: auto;
+    gap: 24px;
+    padding: 104px 0 44px;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .eyebrow {
+    margin-bottom: 12px;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    line-height: 1.45;
+  }
+
+  h1 {
+    white-space: normal;
+  }
+
+  .brand-title {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: nowrap;
+    font-size: clamp(2.75rem, 18vw, 4.65rem);
+    line-height: 0.92;
+  }
+
+  .brand-title-plan {
+    -webkit-text-stroke-width: 1.4px;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.62;
+  }
+
+  .hero-actions {
+    display: grid;
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .primary-button,
+  .ghost-button {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 14px;
+    text-align: center;
+  }
+
+  .hero-proof {
+    display: grid;
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .hero-proof span {
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+  }
+
+  .bridge-board {
+    min-height: clamp(292px, 82vw, 390px);
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .board-header {
+    gap: 10px;
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+  }
+
+  .bridge-scene {
+    inset: 48px 10px 12px;
+  }
+
+  .bridge-drawing {
+    inset: 8% 1% 5%;
+    width: 98%;
+    height: 87%;
+  }
+
+  .dimension {
+    font-size: 0.58rem;
+    letter-spacing: 0.04em;
+  }
+
+  .dimension-top {
+    top: 8%;
+    left: 12%;
+  }
+
+  .dimension-side {
+    right: 4px;
+    bottom: 30%;
+    font-size: 0.54rem;
+  }
+
+  .dimension-note {
+    display: none;
+  }
+
+  .stats {
+    margin-top: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .stats div {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .stats strong {
+    margin-bottom: 6px;
+    font-size: 1.35rem;
+  }
+
+  .section-pad {
+    padding-top: 62px;
+  }
+
+  .showcase {
+    gap: 22px;
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 11vw, 3rem);
+    line-height: 1.02;
+    overflow-wrap: anywhere;
+  }
+
+  h3 {
+    font-size: 1.08rem;
+    line-height: 1.22;
+  }
+
+  .technical-panel {
+    padding: 8px;
+  }
+
+  .panel-row {
+    display: grid;
+    gap: 6px;
+    padding: 16px 12px;
+  }
+
+  .panel-row strong {
+    text-align: left;
+    line-height: 1.35;
+  }
+
+  .progress-track {
+    margin: 18px 12px 10px;
+  }
+
+  .page-main {
+    padding: 104px 0 48px;
+  }
+
+  .page-hero {
+    min-height: auto;
+    gap: 14px;
+    padding: 74px 18px 28px;
+  }
+
+  .page-hero::before {
+    inset: 14px;
+  }
+
+  .page-hero::after {
+    top: 22px;
+    right: 14px;
+    width: min(58vw, 210px);
+    height: 128px;
+  }
+
+  .page-hero h1,
+  html[lang="de"] .page-hero h1 {
+    font-size: clamp(1.8rem, 9.2vw, 2.9rem);
+    line-height: 1.05;
+    overflow-wrap: anywhere;
+  }
+
+  .page-hero p:last-child {
+    font-size: 0.95rem;
+    line-height: 1.62;
+  }
+
+  .service-grid,
+  .type-grid,
+  .timeline {
+    gap: 12px;
+  }
+
+  .service-card,
+  .type-card,
+  .timeline-item {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .card-index {
+    margin-bottom: 28px;
+  }
+
+  .type-card span {
+    margin-bottom: 44px;
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+  }
+
+  .timeline::before {
+    left: 31px;
+  }
+
+  .timeline-item {
+    padding: 58px 20px 20px;
+  }
+
+  .timeline-item span {
+    top: 20px;
+    left: 20px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .contact {
+    gap: 18px;
+    margin-bottom: 28px;
+    padding: 28px 18px;
+  }
+
+  .contact h2 {
+    font-size: clamp(1.8rem, 10vw, 2.8rem);
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header {
+    width: calc(100% - 14px);
+    grid-template-columns: 108px auto 36px;
+    gap: 6px;
+    padding: 7px;
+  }
+
+  .brand {
+    width: 108px;
+    height: 38px;
+    padding: 4px 6px;
+  }
+
+  .language-switch button {
+    min-width: 25px;
+    height: 28px;
+    font-size: 0.62rem;
+  }
+
+  .menu-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .section-grid,
+  .section-pad,
+  .stats,
+  .page-main {
+    width: min(100% - 16px, 1180px);
+  }
+
+  .hero {
+    padding-top: 96px;
+  }
+
+  .brand-title {
+    font-size: clamp(2.35rem, 17vw, 3.55rem);
+  }
+
+  .hero-copy,
+  .service-card p,
+  .type-card p,
+  .timeline-item p,
+  .showcase-copy p,
+  .page-hero p:last-child {
+    font-size: 0.93rem;
+  }
+
+  .bridge-board {
+    min-height: 276px;
+  }
+
+  .bridge-scene {
+    inset: 44px 8px 10px;
+  }
+
+  .dimension-top {
+    left: 9%;
+  }
+
+  .dimension-side {
+    display: none;
+  }
+
+  .stats div,
+  .service-card,
+  .type-card,
+  .timeline-item,
+  .contact {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .page-main {
+    padding-top: 96px;
+  }
+
+  .page-hero {
+    padding: 66px 16px 24px;
+  }
+
+  .page-hero h1,
+  html[lang="de"] .page-hero h1 {
+    font-size: clamp(1.58rem, 8.8vw, 2.35rem);
+  }
+}
+
+@media (max-width: 920px) and (orientation: landscape) {
+  .site-header {
+    top: 8px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 96px;
+  }
+
+  .bridge-board {
+    min-height: 330px;
+  }
+
+  .page-main {
+    padding-top: 96px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   body.is-intro-running {
     overflow-x: hidden;
