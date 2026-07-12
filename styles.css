@@ -720,6 +720,22 @@ h3 {
 .plan-line-drawing path:nth-child(30) { animation-delay: 5.95s; }
 .plan-line-drawing path:nth-child(n + 31) { animation-delay: 6.15s; }
 
+.plan-labels {
+  opacity: 0;
+  animation: labelBlueprint 0.75s ease 2.7s forwards;
+}
+
+.plan-labels text {
+  fill: rgba(246, 252, 255, 0.92);
+  stroke: rgba(9, 44, 96, 0.28);
+  stroke-width: 0.9;
+  paint-order: stroke fill;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-anchor: middle;
+}
+
 .plan-final-image {
   z-index: 3;
   background: url("validplan-blueprint-plan.png") center / contain no-repeat;
@@ -1186,6 +1202,11 @@ html[lang="de"] .page-hero h1 {
 @keyframes finishBlueprint {
   0% { opacity: 0; }
   100% { opacity: 0.12; }
+}
+
+@keyframes labelBlueprint {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 @keyframes traceGlow {
