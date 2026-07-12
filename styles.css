@@ -1549,8 +1549,8 @@ html[lang="de"] .page-hero h1 {
 
   .hero {
     min-height: auto;
-    gap: 24px;
-    padding: 104px 0 44px;
+    gap: 18px;
+    padding: 94px 0 36px;
   }
 
   .hero-content {
@@ -1558,7 +1558,7 @@ html[lang="de"] .page-hero h1 {
   }
 
   .eyebrow {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     font-size: 0.68rem;
     letter-spacing: 0.08em;
     line-height: 1.45;
@@ -1572,7 +1572,7 @@ html[lang="de"] .page-hero h1 {
     display: flex;
     max-width: 100%;
     flex-wrap: nowrap;
-    font-size: clamp(2.75rem, 18vw, 4.65rem);
+    font-size: clamp(2.55rem, 16vw, 4.2rem);
     line-height: 0.92;
   }
 
@@ -1583,14 +1583,14 @@ html[lang="de"] .page-hero h1 {
   .hero-copy {
     max-width: 100%;
     margin-bottom: 0;
-    font-size: 1rem;
-    line-height: 1.62;
+    font-size: 0.96rem;
+    line-height: 1.56;
   }
 
   .hero-actions {
     display: grid;
     gap: 10px;
-    margin-top: 24px;
+    margin-top: 18px;
   }
 
   .primary-button,
@@ -1604,7 +1604,7 @@ html[lang="de"] .page-hero h1 {
   .hero-proof {
     display: grid;
     gap: 8px;
-    margin-top: 18px;
+    margin-top: 14px;
   }
 
   .hero-proof span {
@@ -1618,19 +1618,38 @@ html[lang="de"] .page-hero h1 {
     width: 100%;
     max-width: 100%;
     aspect-ratio: auto;
-    min-height: clamp(292px, 82vw, 390px);
+    min-height: clamp(360px, 116vw, 520px);
     padding: 12px;
     border-radius: 8px;
+    background-size: 20px 20px;
   }
 
   .board-header {
     gap: 10px;
-    font-size: 0.62rem;
+    font-size: 0.58rem;
     letter-spacing: 0.08em;
   }
 
   .bridge-scene {
-    inset: 48px 10px 12px;
+    inset: 42px 8px 8px;
+  }
+
+  .plan-drawing {
+    inset: 6px;
+  }
+
+  .plan-drawing::before,
+  .plan-drawing-grid {
+    background-size: 12px 12px;
+  }
+
+  .scan-line {
+    height: 18%;
+    opacity: 0.7;
+  }
+
+  .plan-drawing-trace::after {
+    width: 42px;
   }
 
   .bridge-drawing {
@@ -1827,11 +1846,11 @@ html[lang="de"] .page-hero h1 {
   }
 
   .hero {
-    padding-top: 96px;
+    padding-top: 90px;
   }
 
   .brand-title {
-    font-size: clamp(2.35rem, 17vw, 3.55rem);
+    font-size: clamp(2.2rem, 15.5vw, 3.2rem);
   }
 
   .hero-copy,
@@ -1844,11 +1863,28 @@ html[lang="de"] .page-hero h1 {
   }
 
   .bridge-board {
-    min-height: 276px;
+    min-height: clamp(330px, 118vw, 440px);
+    padding: 10px;
   }
 
   .bridge-scene {
-    inset: 44px 8px 10px;
+    inset: 40px 6px 7px;
+  }
+
+  .board-header {
+    font-size: 0.54rem;
+  }
+
+  .plan-drawing {
+    inset: 5px;
+  }
+
+  .plan-labels text {
+    font-size: 25px;
+  }
+
+  .plan-labels .room-label {
+    font-size: 30px;
   }
 
   .dimension-top {
@@ -1889,11 +1925,20 @@ html[lang="de"] .page-hero h1 {
 
   .hero {
     min-height: auto;
-    padding-top: 96px;
+    gap: 18px;
+    padding-top: 92px;
   }
 
   .bridge-board {
-    min-height: 330px;
+    min-height: 360px;
+  }
+
+  .bridge-scene {
+    inset: 44px 10px 10px;
+  }
+
+  .hero-proof {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .page-main {
