@@ -3,12 +3,19 @@ const menuButton = document.querySelector(".menu-button");
 const cursorGlow = document.querySelector(".cursor-glow");
 const introLoader = document.querySelector(".intro-loader");
 const introRedirect = document.body.dataset.introRedirect;
+const shouldEnterIntro = document.body.dataset.introEntry === "true";
 const revealItems = document.querySelectorAll(".reveal");
 const languageButtons = document.querySelectorAll("[data-lang]");
+const introSeenKey = "validplan-intro-seen";
 
 function finishIntro() {
   document.body.classList.remove("is-intro-running");
   introLoader?.remove();
+}
+
+if (shouldEnterIntro && !introLoader && sessionStorage.getItem(introSeenKey) !== "true") {
+  sessionStorage.setItem(introSeenKey, "true");
+  window.location.replace("intro.html");
 }
 
 if (introLoader) {
@@ -16,10 +23,16 @@ if (introLoader) {
 
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     finishIntro();
-    if (introRedirect) window.setTimeout(() => window.location.replace(introRedirect), 120);
+    if (introRedirect) {
+      sessionStorage.setItem(introSeenKey, "true");
+      window.setTimeout(() => window.location.replace(introRedirect), 120);
+    }
   } else {
     window.setTimeout(finishIntro, 5000);
-    if (introRedirect) window.setTimeout(() => window.location.replace(introRedirect), 5050);
+    if (introRedirect) {
+      sessionStorage.setItem(introSeenKey, "true");
+      window.setTimeout(() => window.location.replace(introRedirect), 5050);
+    }
   }
 }
 
