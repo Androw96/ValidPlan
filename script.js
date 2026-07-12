@@ -51,8 +51,8 @@ const translations = {
       proof3: "Átlátható dokumentáció"
     },
     bridge: {
-      aria: "Blueprint híd illusztráció",
-      header: "HÍD TERV",
+      aria: "Kirajzolódó blueprint tervrajz",
+      header: "TERVRAJZ",
       axis: "tervezési tengely",
       note: "ív + pályalemez csomópont"
     },
@@ -161,8 +161,8 @@ const translations = {
       proof3: "Clear documentation"
     },
     bridge: {
-      aria: "Blueprint bridge illustration",
-      header: "BRIDGE PLAN",
+      aria: "Animated blueprint plan illustration",
+      header: "BLUEPRINT PLAN",
       axis: "design axis",
       note: "arch + deck node"
     },
@@ -271,8 +271,8 @@ const translations = {
       proof3: "Klare Dokumentation"
     },
     bridge: {
-      aria: "Blueprint-Brückenillustration",
-      header: "BRÜCKENPLAN",
+      aria: "Animierter Blueprint-Bauplan",
+      header: "BAUPLAN",
       axis: "Planungsachse",
       note: "Bogen + Fahrbahnplatte Knoten"
     },

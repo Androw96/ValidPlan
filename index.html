@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260712-mobile-1" />
+    <link rel="stylesheet" href="styles.css?v=20260712-plan-2" />
   </head>
   <body>
     <div class="cursor-glow" aria-hidden="true"></div>
@@ -71,45 +71,18 @@
           </div>
         </div>
 
-        <div class="bridge-board reveal" aria-label="Blueprint híd illusztráció" data-i18n-attr="aria-label:bridge.aria">
+        <div class="bridge-board reveal" aria-label="Kirajzolódó blueprint tervrajz" data-i18n-attr="aria-label:bridge.aria">
           <div class="board-header">
             <span>VP-042</span>
-            <span data-i18n="bridge.header">HÍD TERV</span>
+            <span data-i18n="bridge.header">TERVRAJZ</span>
           </div>
           <div class="bridge-scene">
             <div class="scan-line"></div>
-            <svg class="bridge-drawing" viewBox="0 0 720 420" role="img" aria-labelledby="bridgeTitle bridgeDesc">
-              <title id="bridgeTitle">Ívhíd tervrajz</title>
-              <desc id="bridgeDesc">Méretezett ívhíd blueprint rajz pályalemezzel, pillérekkel, függesztőkkel és méretvonalakkal.</desc>
-              <g class="terrain">
-                <path d="M36 334 C116 318 178 340 254 326 C326 312 402 342 482 323 C568 302 628 325 686 314" />
-                <path d="M42 356 L678 356" />
-              </g>
-              <g class="structure">
-                <path class="arch-main" d="M112 247 C154 102 566 102 608 247" />
-                <path class="arch-inner" d="M136 247 C180 139 540 139 584 247" />
-                <path class="deck" d="M78 257 L642 257" />
-                <path class="deck-secondary" d="M91 276 L629 276" />
-                <path class="abutment" d="M96 257 L96 304 M624 257 L624 304" />
-                <path class="pier" d="M172 276 L172 363 M360 276 L360 370 M548 276 L548 363" />
-                <path class="bearing" d="M155 276 L189 276 M343 276 L377 276 M531 276 L565 276" />
-                <path class="hanger" d="M176 156 L154 257 M250 133 L238 257 M324 122 L322 257 M396 122 L398 257 M470 133 L482 257 M544 156 L566 257" />
-                <path class="crossbrace" d="M154 257 L238 133 M238 257 L322 122 M398 257 L482 133 M482 257 L566 156" />
-              </g>
-              <g class="dimension-lines">
-                <path d="M98 82 L622 82 M98 72 L98 92 M622 72 L622 92" />
-                <path d="M664 122 L664 354 M654 122 L674 122 M654 354 L674 354" />
-                <path d="M360 46 L360 386" />
-              </g>
-              <g class="detail-circles">
-                <circle cx="172" cy="276" r="16" />
-                <circle cx="360" cy="276" r="16" />
-                <circle cx="548" cy="276" r="16" />
-              </g>
-            </svg>
-            <div class="dimension dimension-top">42.80 m</div>
-            <div class="dimension dimension-side" data-i18n="bridge.axis">tervezési tengely</div>
-            <div class="dimension dimension-note" data-i18n="bridge.note">ív + pályalemez csomópont</div>
+            <div class="plan-drawing" role="img" aria-label="Teljes építészeti tervrajz kirajzolódó blueprint animációval">
+              <img src="validplan-blueprint-plan.png" alt="" />
+              <div class="plan-drawing-trace" aria-hidden="true"></div>
+              <div class="plan-drawing-grid" aria-hidden="true"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -170,6 +143,6 @@
       </section>
     </main>
 
-    <script src="script.js?v=20260712-mobile-1"></script>
+    <script src="script.js?v=20260712-plan-2"></script>
   </body>
 </html>
