@@ -30,10 +30,10 @@ if (introLoader) {
       window.setTimeout(() => window.location.replace(introRedirect), 120);
     }
   } else {
-    window.setTimeout(finishIntro, 5000);
+    window.setTimeout(finishIntro, 6200);
     if (introRedirect) {
       sessionStorage.setItem(introSeenKey, "true");
-      window.setTimeout(() => window.location.replace(introRedirect), 5050);
+      window.setTimeout(() => window.location.replace(introRedirect), 6250);
     }
   }
 }
