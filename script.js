@@ -80,8 +80,11 @@ const translations = {
     },
     reference: {
       latestKicker: "Legutóbbi referencia",
+      latestStatus: "Aktuális referencia",
       latestTitle: "2B117 hídépítési tervlap",
-      latestMeta: "Általános terv és metszeti részletek"
+      latestMeta: "Általános terv és metszeti részletek",
+      latestSpec1: "hossz- és keresztmetszet",
+      latestSpec2: "PDF tervlap"
     },
     stats: {
       one: "Koncepció és előtervezés",
@@ -246,8 +249,11 @@ const translations = {
     },
     reference: {
       latestKicker: "Latest reference",
+      latestStatus: "Current reference",
       latestTitle: "2B117 bridge construction drawing",
-      latestMeta: "General plan and sectional details"
+      latestMeta: "General plan and sectional details",
+      latestSpec1: "longitudinal and cross section",
+      latestSpec2: "PDF drawing sheet"
     },
     stats: {
       one: "Concept and preliminary design",
@@ -412,8 +418,11 @@ const translations = {
     },
     reference: {
       latestKicker: "Neueste Referenz",
+      latestStatus: "Aktuelle Referenz",
       latestTitle: "2B117 Brückenbau-Planblatt",
-      latestMeta: "Übersichtsplan und Schnittdetails"
+      latestMeta: "Übersichtsplan und Schnittdetails",
+      latestSpec1: "Längs- und Querschnitt",
+      latestSpec2: "PDF-Planblatt"
     },
     stats: {
       one: "Konzept und Vorplanung",

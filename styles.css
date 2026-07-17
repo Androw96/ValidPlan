@@ -748,37 +748,128 @@ h3 {
   inset: 10px;
   display: grid;
   grid-template-rows: minmax(0, 1fr) auto;
-  border: 1px solid rgba(225, 250, 255, 0.24);
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid rgba(225, 250, 255, 0.32);
+  border-radius: 6px;
   color: inherit;
   background:
+    linear-gradient(135deg, rgba(2, 33, 82, 0.7), rgba(13, 94, 182, 0.48)),
     linear-gradient(rgba(201, 244, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201, 244, 255, 0.08) 1px, transparent 1px),
-    rgba(255, 255, 255, 0.08);
-  background-size: 20px 20px;
+    linear-gradient(90deg, rgba(201, 244, 255, 0.08) 1px, transparent 1px);
+  background-size: auto, 20px 20px, 20px 20px;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.07),
+    0 24px 70px rgba(1, 18, 50, 0.28);
   overflow: hidden;
 }
 
-.latest-reference img {
+.latest-reference::before,
+.latest-reference::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.latest-reference::before {
+  top: 12px;
+  right: 12px;
+  bottom: 86px;
+  width: 34%;
+  border: 1px solid rgba(201, 244, 255, 0.2);
+  border-left: 0;
+  opacity: 0.55;
+}
+
+.latest-reference::after {
+  top: 18px;
+  left: -18%;
+  width: 54%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(247, 251, 255, 0.78), transparent);
+  animation: referenceGlint 5.8s ease-in-out infinite;
+}
+
+.reference-paper {
+  position: relative;
+  display: block;
+  min-height: 0;
+  padding: 12px;
+  border: 1px solid rgba(5, 39, 92, 0.2);
+  border-radius: 4px;
+  background: #f8fbff;
+  box-shadow:
+    0 16px 34px rgba(0, 16, 46, 0.24),
+    0 0 0 1px rgba(255, 255, 255, 0.56);
+  transform: rotate(-0.6deg);
+  z-index: 1;
+}
+
+.reference-paper::before,
+.reference-paper::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-color: rgba(8, 86, 176, 0.34);
+  pointer-events: none;
+}
+
+.reference-paper::before {
+  top: 8px;
+  left: 8px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+
+.reference-paper::after {
+  right: 8px;
+  bottom: 8px;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+}
+
+.reference-paper img {
+  display: block;
   width: 100%;
   height: 100%;
   min-height: 0;
-  padding: 16px;
   object-fit: contain;
-  background: rgba(255, 255, 255, 0.94);
   filter: contrast(1.08) saturate(0.92);
 }
 
 .latest-reference-copy {
+  position: relative;
   display: grid;
-  gap: 4px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px 14px;
+  align-items: center;
   padding: 14px 16px;
-  border-top: 1px solid rgba(201, 244, 255, 0.22);
-  background: rgba(2, 25, 62, 0.76);
+  border: 1px solid rgba(201, 244, 255, 0.18);
+  border-radius: 6px;
+  background: rgba(2, 25, 62, 0.72);
+  backdrop-filter: blur(12px);
+  z-index: 2;
+}
+
+.reference-status {
+  grid-column: 1 / -1;
+  width: fit-content;
+  padding: 4px 8px;
+  border: 1px solid rgba(201, 244, 255, 0.3);
+  border-radius: 999px;
+  color: #052450;
+  background: #d8f6ff;
+  font-size: 0.64rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .latest-reference-copy strong {
   color: #f7fbff;
-  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-size: clamp(1.05rem, 2vw, 1.42rem);
+  line-height: 1.06;
 }
 
 .latest-reference-copy em {
@@ -786,6 +877,38 @@ h3 {
   font-style: normal;
   font-size: 0.82rem;
   font-weight: 800;
+}
+
+.reference-specs {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.reference-specs span {
+  padding: 5px 8px;
+  border: 1px solid rgba(201, 244, 255, 0.18);
+  border-radius: 4px;
+  color: rgba(223, 246, 255, 0.86);
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.reference-open {
+  grid-row: 2 / 4;
+  grid-column: 2;
+  align-self: end;
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: #052450;
+  background: linear-gradient(135deg, #f7fbff, #c9f4ff);
+  font-size: 0.72rem;
+  font-weight: 900;
+  white-space: nowrap;
 }
 
 .bridge-drawing {
@@ -1861,6 +1984,12 @@ html[lang="de"] .page-hero h1 {
   100% { left: 100%; opacity: 0; }
 }
 
+@keyframes referenceGlint {
+  0%, 32% { transform: translateX(0); opacity: 0; }
+  42%, 58% { opacity: 0.82; }
+  70%, 100% { transform: translateX(260%); opacity: 0; }
+}
+
 @keyframes planProgress {
   0%, 100% { width: 58%; }
   50% { width: 88%; }
@@ -2599,6 +2728,36 @@ html[lang="de"] .page-hero h1 {
 
   .plan-drawing {
     inset: 5px;
+  }
+
+  .latest-reference {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .reference-paper {
+    padding: 7px;
+  }
+
+  .latest-reference-copy {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 10px;
+  }
+
+  .reference-open {
+    grid-row: auto;
+    grid-column: auto;
+    width: fit-content;
+    padding: 8px 10px;
+  }
+
+  .reference-specs {
+    gap: 5px;
+  }
+
+  .reference-specs span {
+    font-size: 0.58rem;
   }
 
   .plan-labels text {
