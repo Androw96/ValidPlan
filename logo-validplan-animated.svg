@@ -14,31 +14,49 @@
         animation-timing-function: ease-in-out;
       }
 
+      .reveal-up-mask {
+        transform-box: fill-box;
+        transform-origin: center bottom;
+        transform: scaleY(0);
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+      }
+
       #valiMaskRect {
         animation-name: revealMask;
         animation-duration: 0.8s;
       }
 
-      #dMaskRect {
+      #dLetterMaskRect {
         animation-name: revealMask;
-        animation-duration: 0.75s;
+        animation-duration: 0.45s;
         animation-delay: 0.8s;
+      }
+
+      #dExtensionMaskRect {
+        animation-name: revealUpMask;
+        animation-duration: 0.55s;
+        animation-delay: 1.25s;
       }
 
       #planMaskRect {
         animation-name: revealMask;
         animation-duration: 0.8s;
-        animation-delay: 1.55s;
+        animation-delay: 1.8s;
       }
 
       #swooshMaskPath {
         stroke-dasharray: 2140;
         stroke-dashoffset: 2140;
-        animation: traceSwoosh 1s ease-in-out 2.35s forwards;
+        animation: traceSwoosh 1s ease-in-out 2.6s forwards;
       }
 
       @keyframes revealMask {
         to { transform: scaleX(1); }
+      }
+
+      @keyframes revealUpMask {
+        to { transform: scaleY(1); }
       }
 
       @keyframes traceSwoosh {
@@ -46,8 +64,9 @@
       }
 
       @media (prefers-reduced-motion: reduce) {
-        .reveal-mask {
-          transform: scaleX(1);
+        .reveal-mask,
+        .reveal-up-mask {
+          transform: none;
           animation: none;
         }
 
@@ -62,11 +81,15 @@
       <rect x="0" y="500" width="786" height="413" />
     </clipPath>
 
-    <clipPath id="dClip">
+    <clipPath id="dLetterClip">
+      <rect x="772" y="500" width="306" height="413" />
+      <rect x="962" y="355" width="116" height="558" />
+    </clipPath>
+
+    <clipPath id="dExtensionClip">
       <rect x="686" y="0" width="392" height="355" />
       <rect x="686" y="355" width="95" height="558" />
       <rect x="962" y="355" width="116" height="558" />
-      <rect x="772" y="500" width="306" height="413" />
     </clipPath>
 
     <clipPath id="planClip">
@@ -81,8 +104,12 @@
       <rect id="valiMaskRect" class="reveal-mask" x="0" y="500" width="786" height="413" fill="#fff" />
     </mask>
 
-    <mask id="dMask" maskUnits="userSpaceOnUse">
-      <rect id="dMaskRect" class="reveal-mask" x="686" y="0" width="392" height="913" fill="#fff" />
+    <mask id="dLetterMask" maskUnits="userSpaceOnUse">
+      <rect id="dLetterMaskRect" class="reveal-mask" x="772" y="500" width="306" height="413" fill="#fff" />
+    </mask>
+
+    <mask id="dExtensionMask" maskUnits="userSpaceOnUse">
+      <rect id="dExtensionMaskRect" class="reveal-up-mask" x="686" y="0" width="392" height="913" fill="#fff" />
     </mask>
 
     <mask id="planMask" maskUnits="userSpaceOnUse">
@@ -106,7 +133,11 @@
     <image class="logo-source" href="logo-validplan-new.png" x="0" y="0" width="2036" height="913" />
   </g>
 
-  <g clip-path="url(#dClip)" mask="url(#dMask)">
+  <g clip-path="url(#dLetterClip)" mask="url(#dLetterMask)">
+    <image class="logo-source" href="logo-validplan-new.png" x="0" y="0" width="2036" height="913" />
+  </g>
+
+  <g clip-path="url(#dExtensionClip)" mask="url(#dExtensionMask)">
     <image class="logo-source" href="logo-validplan-new.png" x="0" y="0" width="2036" height="913" />
   </g>
 
