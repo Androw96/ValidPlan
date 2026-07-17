@@ -1435,14 +1435,24 @@ html[lang="de"] .page-hero h1 {
 
 .contact-studio {
   display: grid;
-  gap: 22px;
+  gap: 0;
+}
+
+.contact-workbench {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 390px);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.contact-main-flow,
+.contact-side {
+  display: grid;
+  gap: 18px;
+  min-width: 0;
 }
 
 .contact-brief {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 380px);
-  gap: clamp(22px, 4vw, 56px);
-  align-items: end;
   padding: clamp(28px, 5vw, 58px);
   border: 1px solid rgba(201, 244, 255, 0.24);
   border-radius: 8px;
@@ -1472,7 +1482,7 @@ html[lang="de"] .page-hero h1 {
   position: relative;
   display: grid;
   gap: 16px;
-  min-height: 168px;
+  min-height: 154px;
   align-content: end;
   padding: 22px;
   border: 1px solid rgba(201, 244, 255, 0.26);
@@ -1531,7 +1541,7 @@ html[lang="de"] .page-hero h1 {
 
 .contact-data-card {
   position: relative;
-  min-height: 250px;
+  min-height: 238px;
   padding: 28px;
   border: 1px solid rgba(201, 244, 255, 0.22);
   border-radius: 8px;
@@ -1578,7 +1588,7 @@ html[lang="de"] .page-hero h1 {
   position: relative;
   display: grid;
   gap: 18px;
-  min-height: 330px;
+  min-height: 360px;
   padding: 20px;
   border: 1px solid rgba(201, 244, 255, 0.24);
   border-radius: 8px;
@@ -1946,7 +1956,7 @@ html[lang="de"] .page-hero h1 {
     padding: 38px 24px;
   }
 
-  .contact-brief,
+  .contact-workbench,
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -2400,7 +2410,8 @@ html[lang="de"] .page-hero h1 {
     font-size: clamp(1.8rem, 10vw, 2.8rem);
   }
 
-  .contact-brief {
+  .contact-brief,
+  .contact-mail-card {
     padding: 24px 18px;
   }
 

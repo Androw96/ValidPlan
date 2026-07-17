@@ -174,7 +174,6 @@ const translations = {
         title: "Tervezési fázis",
         copy: "Koncepció, engedélyezés, kiviteli terv vagy meglévő szerkezet felülvizsgálata."
       },
-      blueprintStatus: "brief ellenőrzés",
       output1: "válasz műszaki iránnyal",
       output2: "következő egyeztetési lépés"
     }
@@ -314,7 +313,6 @@ const translations = {
         title: "Design stage",
         copy: "Concept, permit design, construction drawings or review of an existing structure."
       },
-      blueprintStatus: "brief review",
       output1: "response with technical direction",
       output2: "next coordination step"
     }
@@ -454,7 +452,6 @@ const translations = {
         title: "Planungsphase",
         copy: "Konzept, Genehmigungsplanung, Ausführungsplanung oder Prüfung eines bestehenden Bauwerks."
       },
-      blueprintStatus: "Brief-Prüfung",
       output1: "Antwort mit technischer Richtung",
       output2: "nächster Abstimmungsschritt"
     }
