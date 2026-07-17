@@ -1051,6 +1051,128 @@ html[lang="de"] .page-hero h1 {
   margin-left: auto;
 }
 
+.bridge-system,
+.process-map {
+  position: relative;
+  display: grid;
+  gap: 22px;
+  margin-bottom: 22px;
+  padding: 24px;
+  border: 1px solid rgba(201, 244, 255, 0.24);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(8, 86, 176, 0.38), rgba(3, 25, 58, 0.86)),
+    linear-gradient(rgba(201, 244, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 244, 255, 0.06) 1px, transparent 1px);
+  background-size: auto, 22px 22px, 22px 22px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.bridge-system::before,
+.process-map::before {
+  content: "";
+  position: absolute;
+  inset: -20% -8%;
+  background: linear-gradient(110deg, transparent 25%, rgba(201, 244, 255, 0.16), transparent 58%);
+  transform: translateX(-60%);
+  animation: blueprintSweepPanel 6.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.bridge-system-copy,
+.process-map-head {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+}
+
+.bridge-system-copy span,
+.process-map-head span {
+  color: var(--cyan-200);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.bridge-system-copy strong,
+.process-map-head strong {
+  color: #f7fbff;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  line-height: 1.05;
+  text-align: right;
+}
+
+.bridge-system-drawing {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  min-height: 210px;
+  overflow: visible;
+  filter: drop-shadow(0 0 14px rgba(86, 184, 255, 0.24));
+}
+
+.bridge-system-drawing path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.bridge-load-path {
+  stroke: rgba(216, 246, 255, 0.9);
+  stroke-width: 3;
+  stroke-dasharray: 900;
+  stroke-dashoffset: 900;
+  animation: drawBridgeSystem 2.6s ease forwards;
+}
+
+.bridge-deck-path,
+.bridge-foundation-path,
+.bridge-hangers-path {
+  stroke: rgba(201, 244, 255, 0.48);
+  stroke-width: 2;
+  stroke-dasharray: 520;
+  stroke-dashoffset: 520;
+  animation: drawBridgeSystem 2.1s ease 0.35s forwards;
+}
+
+.bridge-foundation-path {
+  animation-delay: 0.65s;
+}
+
+.bridge-hangers-path {
+  animation-delay: 0.9s;
+}
+
+.bridge-flow-path {
+  stroke: rgba(86, 184, 255, 0.88);
+  stroke-width: 4;
+  stroke-dasharray: 24 20;
+  animation: technicalDash 8s linear infinite;
+}
+
+.bridge-nodes circle {
+  fill: rgba(201, 244, 255, 0.16);
+  stroke: rgba(247, 251, 255, 0.92);
+  stroke-width: 2;
+  transform-origin: center;
+  animation: nodeSignal 2.8s ease-in-out infinite;
+}
+
+.bridge-nodes circle:nth-child(2) {
+  animation-delay: 0.45s;
+}
+
+.bridge-nodes circle:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
 .type-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.95fr 0.95fr;
@@ -1058,9 +1180,41 @@ html[lang="de"] .page-hero h1 {
 }
 
 .type-card {
+  position: relative;
   min-height: 300px;
   padding: 28px;
   overflow: hidden;
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    background 0.28s ease;
+}
+
+.type-card::after {
+  content: "";
+  position: absolute;
+  right: -42px;
+  bottom: -42px;
+  width: 132px;
+  height: 132px;
+  border: 1px solid rgba(201, 244, 255, 0.2);
+  border-radius: 50%;
+  transform: scale(0.8);
+  transition:
+    transform 0.28s ease,
+    opacity 0.28s ease;
+  opacity: 0.6;
+}
+
+.type-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(201, 244, 255, 0.6);
+  background: rgba(8, 56, 120, 0.84);
+}
+
+.type-card:hover::after {
+  transform: scale(1.15);
+  opacity: 1;
 }
 
 .type-card:first-child {
@@ -1088,6 +1242,76 @@ html[lang="de"] .page-hero h1 {
   gap: 20px;
 }
 
+.process-map {
+  margin-bottom: 28px;
+}
+
+.process-rail {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding-top: 54px;
+}
+
+.process-rail-line {
+  position: absolute;
+  top: 27px;
+  right: 8%;
+  left: 8%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(201, 244, 255, 0.84), transparent);
+  transform-origin: left;
+  animation: railDraw 2.2s ease forwards;
+}
+
+.process-pulse {
+  position: absolute;
+  top: 21px;
+  left: 8%;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #c9f4ff;
+  box-shadow: 0 0 22px rgba(86, 184, 255, 0.8);
+  animation: railPulse 4.8s cubic-bezier(0.42, 0, 0.2, 1) infinite;
+}
+
+.process-stop {
+  position: relative;
+  min-height: 122px;
+  padding: 22px;
+  border: 1px solid rgba(201, 244, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(0, 18, 48, 0.42);
+  overflow: hidden;
+}
+
+.process-stop::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 22px;
+  width: 1px;
+  height: 40px;
+  background: rgba(201, 244, 255, 0.5);
+}
+
+.process-stop span {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--blue-400);
+  font-size: 1.55rem;
+  font-weight: 900;
+}
+
+.process-stop strong {
+  display: block;
+  color: #f7fbff;
+  font-size: 1.15rem;
+}
+
 .timeline::before {
   content: "";
   position: absolute;
@@ -1101,6 +1325,32 @@ html[lang="de"] .page-hero h1 {
 .timeline-item {
   position: relative;
   padding: 76px 26px 28px;
+  overflow: hidden;
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    background 0.28s ease;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  inset: auto 22px 22px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(201, 244, 255, 0.7), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.32s ease;
+}
+
+.timeline-item:hover {
+  transform: translateY(-8px);
+  border-color: rgba(201, 244, 255, 0.6);
+  background: rgba(8, 56, 120, 0.84);
+}
+
+.timeline-item:hover::after {
+  transform: scaleX(1);
 }
 
 .timeline-item span {
@@ -1294,6 +1544,38 @@ html[lang="de"] .page-hero h1 {
   50% { opacity: 0.95; }
 }
 
+@keyframes blueprintSweepPanel {
+  0%, 18% { transform: translateX(-70%); opacity: 0; }
+  36%, 72% { opacity: 1; }
+  100% { transform: translateX(70%); opacity: 0; }
+}
+
+@keyframes drawBridgeSystem {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes nodeSignal {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.28);
+  }
+}
+
+@keyframes railDraw {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes railPulse {
+  0% { left: 8%; opacity: 0; }
+  8%, 88% { opacity: 1; }
+  100% { left: calc(92% - 14px); opacity: 0; }
+}
+
 @media (min-width: 1600px) {
   .hero {
     grid-template-columns: minmax(0, 0.82fr) minmax(520px, 1.18fr);
@@ -1382,7 +1664,8 @@ html[lang="de"] .page-hero h1 {
   .stats,
   .service-grid,
   .type-grid,
-  .timeline {
+  .timeline,
+  .process-rail {
     grid-template-columns: 1fr;
   }
 
@@ -1392,6 +1675,25 @@ html[lang="de"] .page-hero h1 {
     left: 38px;
     width: 1px;
     height: auto;
+  }
+
+  .bridge-system-copy,
+  .process-map-head {
+    display: grid;
+  }
+
+  .bridge-system-copy strong,
+  .process-map-head strong {
+    text-align: left;
+  }
+
+  .process-rail {
+    padding-top: 20px;
+  }
+
+  .process-rail-line,
+  .process-pulse {
+    display: none;
   }
 
   .contact {
@@ -1786,13 +2088,15 @@ html[lang="de"] .page-hero h1 {
 
   .service-grid,
   .type-grid,
-  .timeline {
+  .timeline,
+  .process-rail {
     gap: 12px;
   }
 
   .service-card,
   .type-card,
-  .timeline-item {
+  .timeline-item,
+  .process-stop {
     min-height: auto;
     padding: 20px;
   }
@@ -1805,6 +2109,19 @@ html[lang="de"] .page-hero h1 {
     margin-bottom: 44px;
     font-size: 0.66rem;
     letter-spacing: 0.08em;
+  }
+
+  .bridge-system,
+  .process-map {
+    padding: 18px;
+  }
+
+  .bridge-system-drawing {
+    min-height: 150px;
+  }
+
+  .process-stop::before {
+    display: none;
   }
 
   .timeline::before {
@@ -1919,6 +2236,7 @@ html[lang="de"] .page-hero h1 {
   .service-card,
   .type-card,
   .timeline-item,
+  .process-stop,
   .contact {
     padding-left: 16px;
     padding-right: 16px;

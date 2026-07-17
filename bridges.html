@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260717-proof-1" />
+    <link rel="stylesheet" href="styles.css?v=20260717-motion-1" />
   </head>
   <body>
     <div class="cursor-glow" aria-hidden="true"></div>
@@ -51,6 +51,24 @@
       </section>
 
       <section class="bridge-types section-pad">
+        <div class="bridge-system reveal">
+          <div class="bridge-system-copy">
+            <span data-i18n="bridges.diagram.kicker">Terhelés -> szerkezet -> részlet</span>
+            <strong data-i18n="bridges.diagram.title">A híd logikája láthatóvá válik</strong>
+          </div>
+          <svg class="bridge-system-drawing" viewBox="0 0 920 260" aria-hidden="true">
+            <path class="bridge-load-path" d="M92 160 C260 52 660 52 828 160" />
+            <path class="bridge-deck-path" d="M92 160 H828" />
+            <path class="bridge-foundation-path" d="M160 160 V222 H238 V160 M682 160 V222 H760 V160" />
+            <path class="bridge-hangers-path" d="M214 130 V160 M306 96 V160 M398 78 V160 M490 74 V160 M582 88 V160 M674 118 V160" />
+            <path class="bridge-flow-path" d="M104 190 H264 L300 172 H430 L464 190 H620 L660 172 H816" />
+            <g class="bridge-nodes">
+              <circle cx="160" cy="160" r="9" />
+              <circle cx="460" cy="76" r="9" />
+              <circle cx="760" cy="160" r="9" />
+            </g>
+          </svg>
+        </div>
         <div class="type-grid">
           <article class="type-card reveal">
             <span data-i18n="bridges.type1.meta">Gyalogos hidak</span>
@@ -71,6 +89,6 @@
       </section>
     </main>
 
-    <script src="script.js?v=20260717-proof-1"></script>
+    <script src="script.js?v=20260717-motion-1"></script>
   </body>
 </html>

@@ -104,6 +104,10 @@ const translations = {
     bridges: {
       eyebrow: "Hídstruktúrák",
       title: "A forma a teherúttal kezdődik",
+      diagram: {
+        kicker: "Terhelés -> szerkezet -> részlet",
+        title: "A híd logikája láthatóvá válik"
+      },
       type1: {
         meta: "Gyalogos hidak",
         title: "Könnyű, elegáns szerkezetek",
@@ -123,6 +127,10 @@ const translations = {
     process: {
       eyebrow: "Módszer",
       title: "Tiszta tervút a felméréstől a megvalósításig",
+      flow: {
+        kicker: "Tervezési pálya",
+        title: "A döntések egymásra épülnek"
+      },
       step1: {
         title: "Felmérés",
         copy: "Igények, helyszíni adottságok, terhelési feltételek és szabványos keretek pontosítása."
@@ -217,6 +225,10 @@ const translations = {
     bridges: {
       eyebrow: "Bridge structures",
       title: "Form begins with the load path",
+      diagram: {
+        kicker: "Load -> structure -> detail",
+        title: "The bridge logic becomes visible"
+      },
       type1: {
         meta: "Pedestrian bridges",
         title: "Lightweight, elegant structures",
@@ -236,6 +248,10 @@ const translations = {
     process: {
       eyebrow: "Method",
       title: "A clear design route from survey to delivery",
+      flow: {
+        kicker: "Design route",
+        title: "Each decision builds on the previous one"
+      },
       step1: {
         title: "Survey",
         copy: "Clarifying needs, site constraints, loading conditions and the applicable standards framework."
@@ -330,6 +346,10 @@ const translations = {
     bridges: {
       eyebrow: "Brückentragwerke",
       title: "Die Form beginnt mit dem Lastpfad",
+      diagram: {
+        kicker: "Last -> Tragwerk -> Detail",
+        title: "Die Brückenlogik wird sichtbar"
+      },
       type1: {
         meta: "Fußgängerbrücken",
         title: "Leichte, elegante Konstruktionen",
@@ -349,6 +369,10 @@ const translations = {
     process: {
       eyebrow: "Methode",
       title: "Ein klarer Planungsweg von der Aufnahme bis zur Umsetzung",
+      flow: {
+        kicker: "Planungsweg",
+        title: "Jede Entscheidung baut auf der vorherigen auf"
+      },
       step1: {
         title: "Aufnahme",
         copy: "Klärung von Anforderungen, Standortbedingungen, Lastannahmen und normativen Rahmenbedingungen."
