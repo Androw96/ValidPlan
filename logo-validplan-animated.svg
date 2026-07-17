@@ -14,14 +14,6 @@
         animation-timing-function: ease-in-out;
       }
 
-      .reveal-up-mask {
-        transform-box: fill-box;
-        transform-origin: center bottom;
-        transform: scaleY(0);
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in-out;
-      }
-
       #valiMaskRect {
         animation-name: revealMask;
         animation-duration: 0.8s;
@@ -33,30 +25,36 @@
         animation-delay: 0.8s;
       }
 
-      #dExtensionMaskRect {
-        animation-name: revealUpMask;
-        animation-duration: 0.55s;
-        animation-delay: 1.25s;
+      .d-extension-main {
+        stroke-dasharray: 1750;
+        stroke-dashoffset: 1750;
+        animation: traceExtension 0.8s ease-in-out 1.25s forwards;
+      }
+
+      .d-extension-cross {
+        stroke-dasharray: 420;
+        stroke-dashoffset: 420;
+        animation: traceExtension 0.45s ease-in-out 1.55s forwards;
       }
 
       #planMaskRect {
         animation-name: revealMask;
         animation-duration: 0.8s;
-        animation-delay: 1.8s;
+        animation-delay: 2.05s;
       }
 
       #swooshMaskPath {
         stroke-dasharray: 2140;
         stroke-dashoffset: 2140;
-        animation: traceSwoosh 1s ease-in-out 2.6s forwards;
+        animation: traceSwoosh 1s ease-in-out 2.85s forwards;
       }
 
       @keyframes revealMask {
         to { transform: scaleX(1); }
       }
 
-      @keyframes revealUpMask {
-        to { transform: scaleY(1); }
+      @keyframes traceExtension {
+        to { stroke-dashoffset: 0; }
       }
 
       @keyframes traceSwoosh {
@@ -64,12 +62,13 @@
       }
 
       @media (prefers-reduced-motion: reduce) {
-        .reveal-mask,
-        .reveal-up-mask {
+        .reveal-mask {
           transform: none;
           animation: none;
         }
 
+        .d-extension-main,
+        .d-extension-cross,
         #swooshMaskPath {
           stroke-dashoffset: 0;
           animation: none;
@@ -109,7 +108,24 @@
     </mask>
 
     <mask id="dExtensionMask" maskUnits="userSpaceOnUse">
-      <rect id="dExtensionMaskRect" class="reveal-up-mask" x="686" y="0" width="392" height="913" fill="#fff" />
+      <path
+        class="d-extension-main"
+        d="M1018 615 V58 H721 V462"
+        fill="none"
+        stroke="#fff"
+        stroke-width="118"
+        stroke-linecap="square"
+        stroke-linejoin="miter"
+      />
+      <path
+        class="d-extension-cross"
+        d="M1018 355 H721"
+        fill="none"
+        stroke="#fff"
+        stroke-width="74"
+        stroke-linecap="square"
+        stroke-linejoin="miter"
+      />
     </mask>
 
     <mask id="planMask" maskUnits="userSpaceOnUse">
