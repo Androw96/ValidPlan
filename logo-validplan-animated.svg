@@ -28,25 +28,25 @@
       .d-extension-main {
         stroke-dasharray: 1750;
         stroke-dashoffset: 1750;
-        animation: traceExtension 0.8s ease-in-out 1.25s forwards;
+        animation: traceExtension 0.82s ease-in-out 1.16s forwards;
       }
 
       .d-extension-cross {
         stroke-dasharray: 420;
         stroke-dashoffset: 420;
-        animation: traceExtension 0.45s ease-in-out 1.55s forwards;
+        animation: traceExtension 0.42s ease-in-out 1.48s forwards;
       }
 
       #planMaskRect {
         animation-name: revealMask;
         animation-duration: 0.8s;
-        animation-delay: 2.05s;
+        animation-delay: 1.98s;
       }
 
       #swooshMaskPath {
         stroke-dasharray: 2140;
         stroke-dashoffset: 2140;
-        animation: traceSwoosh 1s ease-in-out 2.85s forwards;
+        animation: traceSwoosh 1s ease-in-out 2.78s forwards;
       }
 
       @keyframes revealMask {
