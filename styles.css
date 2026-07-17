@@ -1,15 +1,15 @@
 :root {
-  --blue-950: #061b39;
-  --blue-900: #082a59;
-  --blue-800: #063d86;
+  --blue-950: #0a2b5f;
+  --blue-900: #0b4c9d;
+  --blue-800: #0964c8;
   --blue-600: #0878ff;
   --blue-400: #56b8ff;
   --cyan-200: #c9f4ff;
   --white: #f7fbff;
-  --muted: #a8c5df;
-  --line: rgba(174, 225, 255, 0.22);
-  --glass: rgba(5, 35, 76, 0.72);
-  --shadow: 0 26px 80px rgba(1, 14, 36, 0.42);
+  --muted: #c6dcf0;
+  --line: rgba(210, 244, 255, 0.28);
+  --glass: rgba(7, 62, 128, 0.66);
+  --shadow: 0 26px 80px rgba(1, 20, 52, 0.34);
 }
 
 * {
@@ -27,9 +27,10 @@ body {
   font-family: "Inter", Arial, sans-serif;
   color: var(--white);
   background:
-    radial-gradient(circle at 18% 18%, rgba(0, 126, 255, 0.34), transparent 30%),
-    radial-gradient(circle at 78% 8%, rgba(85, 195, 255, 0.22), transparent 28%),
-    linear-gradient(135deg, var(--blue-950), var(--blue-900) 48%, #031226);
+    radial-gradient(circle at 18% 18%, rgba(77, 183, 255, 0.38), transparent 32%),
+    radial-gradient(circle at 78% 8%, rgba(159, 227, 255, 0.28), transparent 30%),
+    radial-gradient(circle at 60% 78%, rgba(9, 116, 227, 0.26), transparent 34%),
+    linear-gradient(135deg, #0b4f9e, #0c63c5 48%, #063776);
   overflow-x: hidden;
 }
 
@@ -45,10 +46,11 @@ body::before {
   background-image:
     linear-gradient(var(--line) 1px, transparent 1px),
     linear-gradient(90deg, var(--line) 1px, transparent 1px),
-    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 72px 72px, 72px 72px, 12px 12px, 12px 12px;
-  mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.88) 70%, transparent 100%);
+  opacity: 0.95;
+  mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 78%, transparent 100%);
   z-index: -2;
 }
 
@@ -57,9 +59,17 @@ body::after {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(120deg, transparent 0 40%, rgba(255, 255, 255, 0.07) 50%, transparent 60% 100%);
-  background-size: 240% 240%;
-  animation: blueprintSweep 9s linear infinite;
+  background:
+    linear-gradient(120deg, transparent 0 38%, rgba(255, 255, 255, 0.11) 48%, transparent 58% 100%),
+    radial-gradient(circle at 12% 24%, rgba(219, 250, 255, 0.22) 0 2px, transparent 3px),
+    radial-gradient(circle at 82% 18%, rgba(219, 250, 255, 0.18) 0 2px, transparent 3px),
+    linear-gradient(90deg, transparent 0 16%, rgba(218, 248, 255, 0.18) 16% 16.25%, transparent 16.25% 100%),
+    linear-gradient(0deg, transparent 0 62%, rgba(218, 248, 255, 0.15) 62% 62.25%, transparent 62.25% 100%),
+    conic-gradient(from 220deg at 78% 74%, transparent 0 58%, rgba(218, 248, 255, 0.16) 58% 61%, transparent 61% 100%);
+  background-size: 230% 230%, 420px 280px, 360px 240px, 520px 360px, 440px 300px, 620px 420px;
+  animation:
+    blueprintSweep 7s linear infinite,
+    blueprintObjectDrift 13s ease-in-out infinite alternate;
   z-index: -1;
 }
 
@@ -136,7 +146,7 @@ a {
   padding: 12px 14px 12px 18px;
   border: 1px solid rgba(204, 241, 255, 0.24);
   border-radius: 8px;
-  background: rgba(3, 25, 58, 0.78);
+  background: rgba(5, 54, 118, 0.76);
   box-shadow: 0 16px 50px rgba(0, 14, 42, 0.32);
   backdrop-filter: blur(18px);
   transform: translateX(-50%);
@@ -333,16 +343,17 @@ a {
 .measure-line {
   position: absolute;
   display: block;
-  border: 1px solid rgba(201, 244, 255, 0.22);
-  opacity: 0.8;
+  border: 1px solid rgba(225, 250, 255, 0.34);
+  opacity: 0.72;
+  box-shadow: 0 0 24px rgba(131, 213, 255, 0.12);
 }
 
 .line-a {
-  top: 25%;
+  top: 22%;
   left: -7%;
   width: 28%;
   height: 92px;
-  animation: floatLine 7s ease-in-out infinite;
+  animation: floatLine 5.8s ease-in-out infinite;
 }
 
 .line-b {
@@ -350,7 +361,7 @@ a {
   bottom: 22%;
   width: 16%;
   height: 170px;
-  animation: floatLine 8s ease-in-out infinite reverse;
+  animation: floatLine 6.2s ease-in-out infinite reverse;
 }
 
 .line-c {
@@ -359,7 +370,34 @@ a {
   width: 130px;
   height: 130px;
   transform: rotate(45deg);
-  animation: pulseLine 5s ease-in-out infinite;
+  animation: pulseLine 3.8s ease-in-out infinite;
+}
+
+.line-d {
+  top: 58%;
+  left: 8%;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  animation: pulseLine 4.6s ease-in-out 0.8s infinite;
+}
+
+.line-e {
+  top: 36%;
+  right: 14%;
+  width: 240px;
+  height: 1px;
+  border-width: 1px 0 0;
+  animation: floatLine 5.4s ease-in-out 0.4s infinite;
+}
+
+.line-f {
+  right: 38%;
+  bottom: 13%;
+  width: 92px;
+  height: 92px;
+  transform: rotate(12deg);
+  animation: pulseLine 4.2s ease-in-out 1.2s infinite;
 }
 
 .eyebrow {
@@ -494,7 +532,7 @@ h3 {
   background:
     linear-gradient(rgba(201, 244, 255, 0.09) 1px, transparent 1px),
     linear-gradient(90deg, rgba(201, 244, 255, 0.09) 1px, transparent 1px),
-    rgba(4, 42, 91, 0.66);
+    rgba(8, 77, 159, 0.6);
   background-size: 28px 28px;
   box-shadow: var(--shadow);
   overflow: hidden;
@@ -526,7 +564,7 @@ h3 {
   border: 1px solid rgba(201, 244, 255, 0.26);
   background:
     radial-gradient(circle at 50% 50%, rgba(78, 185, 255, 0.18), transparent 62%),
-    rgba(2, 24, 58, 0.42);
+    rgba(5, 55, 128, 0.34);
   overflow: hidden;
 }
 
@@ -847,7 +885,7 @@ h3 {
   border: 1px solid rgba(201, 244, 255, 0.24);
   border-radius: 8px;
   background:
-    linear-gradient(135deg, rgba(8, 86, 176, 0.56), rgba(4, 26, 60, 0.9)),
+    linear-gradient(135deg, rgba(20, 117, 218, 0.66), rgba(8, 57, 128, 0.78)),
     linear-gradient(rgba(201, 244, 255, 0.08) 1px, transparent 1px),
     linear-gradient(90deg, rgba(201, 244, 255, 0.08) 1px, transparent 1px);
   background-size: auto, 24px 24px, 24px 24px;
@@ -874,6 +912,7 @@ h3 {
   border-bottom: 4px solid rgba(201, 244, 255, 0.5);
   border-radius: 50% 50% 0 0 / 100% 100% 0 0;
   opacity: 0.5;
+  animation: pulseLine 4.8s ease-in-out infinite;
 }
 
 .page-hero > * {
@@ -1619,14 +1658,38 @@ html[lang="de"] .page-hero h1 {
   100% { background-position: -120% 0; }
 }
 
+@keyframes blueprintObjectDrift {
+  0% {
+    opacity: 0.42;
+    background-position:
+      120% 0,
+      0 0,
+      60px 20px,
+      0 0,
+      40px 80px,
+      0 0;
+  }
+  50% { opacity: 0.78; }
+  100% {
+    opacity: 0.58;
+    background-position:
+      -120% 0,
+      120px 62px,
+      -40px 84px,
+      180px 40px,
+      -120px -30px,
+      90px -64px;
+  }
+}
+
 @keyframes floatLine {
-  0%, 100% { transform: translate3d(0, 0, 0); }
-  50% { transform: translate3d(14px, -18px, 0); }
+  0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.42; }
+  50% { transform: translate3d(14px, -18px, 0); opacity: 0.98; }
 }
 
 @keyframes pulseLine {
-  0%, 100% { opacity: 0.35; }
-  50% { opacity: 0.85; }
+  0%, 100% { opacity: 0.28; }
+  50% { opacity: 0.92; }
 }
 
 @keyframes rotateSpec {

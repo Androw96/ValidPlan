@@ -8,7 +8,10 @@ const revealItems = document.querySelectorAll(".reveal");
 const languageButtons = document.querySelectorAll("[data-lang]");
 const introSeenKey = "validplan-intro-seen";
 const contentOverrideKey = "validplan-content-overrides";
+const settingsOverrideKey = "validplan-site-settings";
+const languageStorageKey = "validplan-language";
 const remoteContentPath = "content-overrides.json";
+let siteSettings = { defaultLanguage: "hu" };
 
 function finishIntro() {
   document.body.classList.remove("is-intro-running");
@@ -470,12 +473,28 @@ function mergeContent(target, source) {
   return target;
 }
 
+function applySettings(settings) {
+  const defaultLanguage = settings?.defaultLanguage;
+  if (translations[defaultLanguage]) siteSettings.defaultLanguage = defaultLanguage;
+}
+
+function getLocalSettings() {
+  try {
+    return JSON.parse(localStorage.getItem(settingsOverrideKey) || "{}");
+  } catch {
+    localStorage.removeItem(settingsOverrideKey);
+    return {};
+  }
+}
+
 try {
   const savedContent = JSON.parse(localStorage.getItem(contentOverrideKey) || "{}");
   mergeContent(translations, savedContent.content || savedContent);
+  applySettings(savedContent.settings);
 } catch {
   localStorage.removeItem(contentOverrideKey);
 }
+applySettings(getLocalSettings());
 
 async function loadRemoteContentOverrides() {
   if (window.location.protocol === "file:") return;
@@ -485,6 +504,8 @@ async function loadRemoteContentOverrides() {
     if (!response.ok) return;
     const remoteContent = await response.json();
     mergeContent(translations, remoteContent.content || remoteContent);
+    applySettings(remoteContent.settings);
+    applySettings(getLocalSettings());
   } catch {
     // A missing or invalid remote override file should never block the site.
   }
@@ -492,6 +513,7 @@ async function loadRemoteContentOverrides() {
 
 window.ValidPlanTranslations = translations;
 window.ValidPlanContentOverrideKey = contentOverrideKey;
+window.ValidPlanSettingsOverrideKey = settingsOverrideKey;
 window.ValidPlanContentReady = loadRemoteContentOverrides();
 
 const getTranslation = (path, lang) =>
@@ -518,7 +540,7 @@ function setLanguage(lang) {
   languageButtons.forEach((button) => {
     button.classList.toggle("is-active", button.dataset.lang === dictionary);
   });
-  localStorage.setItem("validplan-language", dictionary);
+  localStorage.setItem(languageStorageKey, dictionary);
 }
 
 menuButton?.addEventListener("click", () => {
@@ -562,5 +584,5 @@ revealItems.forEach((item, index) => {
 
 window.ValidPlanContentReady.finally(() => {
   window.ValidPlanTranslations = translations;
-  setLanguage(localStorage.getItem("validplan-language") || "hu");
+  setLanguage(localStorage.getItem(languageStorageKey) || siteSettings.defaultLanguage || "hu");
 });

@@ -1,6 +1,9 @@
 {
   "project": "ValidPlan",
   "type": "content-overrides",
+  "settings": {
+    "defaultLanguage": "hu"
+  },
   "content": {
     "hu": {},
     "en": {},
