@@ -52,6 +52,7 @@ const translations = {
       aria: "Fő navigáció",
       expertise: "Szakértelem",
       bridges: "Hidak",
+      references: "Referenciák",
       process: "Folyamat",
       contact: "Kapcsolat",
       cta: "Ajánlatkérés"
@@ -76,6 +77,11 @@ const translations = {
       header: "TERVRAJZ",
       axis: "tervezési tengely",
       note: "ív + pályalemez csomópont"
+    },
+    reference: {
+      latestKicker: "Legutóbbi referencia",
+      latestTitle: "2B117 hídépítési tervlap",
+      latestMeta: "Általános terv és metszeti részletek"
     },
     stats: {
       one: "Koncepció és előtervezés",
@@ -125,6 +131,27 @@ const translations = {
         meta: "Felújítás és ellenőrzés",
         title: "Meglévő szerkezetek újragondolása",
         copy: "Állapotfelméréshez illesztett megerősítési koncepciók, javítási részletek és tervszintű döntéstámogatás."
+      }
+    },
+    references: {
+      eyebrow: "Referencia munkák",
+      title: "Valódi tervlapok, mérnöki részletekkel",
+      lead: "Válogatás olyan tervrajzokból, ahol a szerkezeti gondolkodás, a részletezés és a kivitelezhetőség együtt jelenik meg.",
+      openPdf: "PDF megnyitása",
+      card1: {
+        meta: "Legutóbbi referencia",
+        title: "2B117 hídépítési tervlap",
+        copy: "Általános terv, hossz- és keresztmetszeti részletek, műszaki megjegyzésekkel."
+      },
+      card2: {
+        meta: "Rámpa szerkezet",
+        title: "B06/B713 rámpa vasalási terv",
+        copy: "Részletes vasalási elrendezések, nézetek, metszetek és tételes táblázatok."
+      },
+      card3: {
+        meta: "Támasz részletek",
+        title: "B18/B777 támasz vasalási terv",
+        copy: "Támasz, fejgerenda, keresztmetszetek és átmérő-tömeg összesítések."
       }
     },
     process: {
@@ -191,6 +218,7 @@ const translations = {
       aria: "Primary navigation",
       expertise: "Expertise",
       bridges: "Bridges",
+      references: "References",
       process: "Process",
       contact: "Contact",
       cta: "Request proposal"
@@ -215,6 +243,11 @@ const translations = {
       header: "BLUEPRINT PLAN",
       axis: "design axis",
       note: "arch + deck node"
+    },
+    reference: {
+      latestKicker: "Latest reference",
+      latestTitle: "2B117 bridge construction drawing",
+      latestMeta: "General plan and sectional details"
     },
     stats: {
       one: "Concept and preliminary design",
@@ -264,6 +297,27 @@ const translations = {
         meta: "Renovation and review",
         title: "Rethinking existing structures",
         copy: "Strengthening concepts, repair details and design-level decision support based on condition assessment."
+      }
+    },
+    references: {
+      eyebrow: "Reference work",
+      title: "Real drawings with engineering detail",
+      lead: "A selection of drawings where structural thinking, detailing and buildability appear together.",
+      openPdf: "Open PDF",
+      card1: {
+        meta: "Latest reference",
+        title: "2B117 bridge construction drawing",
+        copy: "General plan, longitudinal and cross-sectional details with technical notes."
+      },
+      card2: {
+        meta: "Ramp structure",
+        title: "B06/B713 ramp reinforcement drawing",
+        copy: "Detailed reinforcement layouts, views, sections and itemized schedules."
+      },
+      card3: {
+        meta: "Support details",
+        title: "B18/B777 support reinforcement drawing",
+        copy: "Support, head beam, cross-sections and diameter-to-weight summaries."
       }
     },
     process: {
@@ -330,6 +384,7 @@ const translations = {
       aria: "Hauptnavigation",
       expertise: "Expertise",
       bridges: "Brücken",
+      references: "Referenzen",
       process: "Ablauf",
       contact: "Kontakt",
       cta: "Anfrage"
@@ -354,6 +409,11 @@ const translations = {
       header: "BAUPLAN",
       axis: "Planungsachse",
       note: "Bogen + Fahrbahnplatte Knoten"
+    },
+    reference: {
+      latestKicker: "Neueste Referenz",
+      latestTitle: "2B117 Brückenbau-Planblatt",
+      latestMeta: "Übersichtsplan und Schnittdetails"
     },
     stats: {
       one: "Konzept und Vorplanung",
@@ -403,6 +463,27 @@ const translations = {
         meta: "Sanierung und Prüfung",
         title: "Bestehende Tragwerke neu denken",
         copy: "Verstärkungskonzepte, Instandsetzungsdetails und planerische Entscheidungshilfen auf Basis der Zustandserfassung."
+      }
+    },
+    references: {
+      eyebrow: "Referenzarbeiten",
+      title: "Echte Planblätter mit technischen Details",
+      lead: "Eine Auswahl von Zeichnungen, in denen Tragwerksdenken, Detailplanung und Ausführbarkeit zusammen erscheinen.",
+      openPdf: "PDF öffnen",
+      card1: {
+        meta: "Neueste Referenz",
+        title: "2B117 Brückenbau-Planblatt",
+        copy: "Übersichtsplan, Längs- und Querschnittsdetails mit technischen Hinweisen."
+      },
+      card2: {
+        meta: "Rampenbauwerk",
+        title: "B06/B713 Bewehrungsplan Rampe",
+        copy: "Detaillierte Bewehrungsanordnungen, Ansichten, Schnitte und Stücklisten."
+      },
+      card3: {
+        meta: "Auflagerdetails",
+        title: "B18/B777 Bewehrungsplan Auflager",
+        copy: "Auflager, Kopfbalken, Querschnitte und Durchmesser-Gewicht-Zusammenstellungen."
       }
     },
     process: {
