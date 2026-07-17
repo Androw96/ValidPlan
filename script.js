@@ -7,6 +7,8 @@ const shouldEnterIntro = document.body.dataset.introEntry === "true";
 const revealItems = document.querySelectorAll(".reveal");
 const languageButtons = document.querySelectorAll("[data-lang]");
 const introSeenKey = "validplan-intro-seen";
+const contentOverrideKey = "validplan-content-overrides";
+const remoteContentPath = "content-overrides.json";
 
 function finishIntro() {
   document.body.classList.remove("is-intro-running");
@@ -62,6 +64,9 @@ const translations = {
       proof1: "Eurocode szemlélet",
       proof2: "Kivitelezhető részletek",
       proof3: "Átlátható dokumentáció"
+    },
+    intro: {
+      caption: "hídtervező mérnökiroda"
     },
     bridge: {
       aria: "Kirajzolódó blueprint tervrajz",
@@ -173,6 +178,9 @@ const translations = {
       proof2: "Buildable details",
       proof3: "Clear documentation"
     },
+    intro: {
+      caption: "bridge design studio"
+    },
     bridge: {
       aria: "Animated blueprint plan illustration",
       header: "BLUEPRINT PLAN",
@@ -283,6 +291,9 @@ const translations = {
       proof2: "Ausführbare Details",
       proof3: "Klare Dokumentation"
     },
+    intro: {
+      caption: "Ingenieurbüro für Brückenplanung"
+    },
     bridge: {
       aria: "Animierter Blueprint-Bauplan",
       header: "BAUPLAN",
@@ -369,6 +380,42 @@ const translations = {
   }
 };
 
+function mergeContent(target, source) {
+  Object.keys(source || {}).forEach((key) => {
+    if (source[key] && typeof source[key] === "object" && !Array.isArray(source[key])) {
+      if (!target[key] || typeof target[key] !== "object") target[key] = {};
+      mergeContent(target[key], source[key]);
+      return;
+    }
+    target[key] = source[key];
+  });
+  return target;
+}
+
+try {
+  const savedContent = JSON.parse(localStorage.getItem(contentOverrideKey) || "{}");
+  mergeContent(translations, savedContent.content || savedContent);
+} catch {
+  localStorage.removeItem(contentOverrideKey);
+}
+
+async function loadRemoteContentOverrides() {
+  if (window.location.protocol === "file:") return;
+
+  try {
+    const response = await fetch(`${remoteContentPath}?v=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) return;
+    const remoteContent = await response.json();
+    mergeContent(translations, remoteContent.content || remoteContent);
+  } catch {
+    // A missing or invalid remote override file should never block the site.
+  }
+}
+
+window.ValidPlanTranslations = translations;
+window.ValidPlanContentOverrideKey = contentOverrideKey;
+window.ValidPlanContentReady = loadRemoteContentOverrides();
+
 const getTranslation = (path, lang) =>
   path.split(".").reduce((value, key) => (value ? value[key] : undefined), translations[lang]);
 
@@ -435,4 +482,7 @@ revealItems.forEach((item, index) => {
   observer.observe(item);
 });
 
-setLanguage(localStorage.getItem("validplan-language") || "hu");
+window.ValidPlanContentReady.finally(() => {
+  window.ValidPlanTranslations = translations;
+  setLanguage(localStorage.getItem("validplan-language") || "hu");
+});

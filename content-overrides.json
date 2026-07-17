@@ -1,0 +1,9 @@
+{
+  "project": "ValidPlan",
+  "type": "content-overrides",
+  "content": {
+    "hu": {},
+    "en": {},
+    "de": {}
+  }
+}
