@@ -1433,6 +1433,250 @@ html[lang="de"] .page-hero h1 {
   margin-bottom: 0;
 }
 
+.contact-studio {
+  display: grid;
+  gap: 22px;
+}
+
+.contact-brief {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 380px);
+  gap: clamp(22px, 4vw, 56px);
+  align-items: end;
+  padding: clamp(28px, 5vw, 58px);
+  border: 1px solid rgba(201, 244, 255, 0.24);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(8, 86, 176, 0.62), rgba(4, 26, 60, 0.92)),
+    linear-gradient(rgba(201, 244, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 244, 255, 0.08) 1px, transparent 1px);
+  background-size: auto, 24px 24px, 24px 24px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.contact-brief h2 {
+  max-width: 720px;
+  margin-bottom: 18px;
+}
+
+.contact-brief p:not(.eyebrow) {
+  max-width: 680px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.contact-mail-card {
+  position: relative;
+  display: grid;
+  gap: 16px;
+  min-height: 168px;
+  align-content: end;
+  padding: 22px;
+  border: 1px solid rgba(201, 244, 255, 0.26);
+  border-radius: 8px;
+  background:
+    linear-gradient(rgba(201, 244, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 244, 255, 0.06) 1px, transparent 1px),
+    rgba(0, 18, 48, 0.54);
+  background-size: 18px 18px;
+  overflow: hidden;
+  transition:
+    transform 0.24s ease,
+    border-color 0.24s ease,
+    background 0.24s ease;
+}
+
+.contact-mail-card::before {
+  content: "";
+  position: absolute;
+  inset: auto 22px 22px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cyan-200), transparent);
+  transform-origin: left;
+  animation: railDraw 2.2s ease infinite alternate;
+}
+
+.contact-mail-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(201, 244, 255, 0.72);
+  background: rgba(8, 56, 120, 0.74);
+}
+
+.contact-mail-card span,
+.contact-blueprint-head,
+.contact-blueprint-foot {
+  color: var(--cyan-200);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.contact-mail-card strong {
+  position: relative;
+  z-index: 1;
+  color: #f7fbff;
+  font-size: clamp(1.05rem, 2.3vw, 1.45rem);
+  overflow-wrap: anywhere;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.contact-data-card {
+  position: relative;
+  min-height: 250px;
+  padding: 28px;
+  border: 1px solid rgba(201, 244, 255, 0.22);
+  border-radius: 8px;
+  background: var(--glass);
+  box-shadow: 0 20px 60px rgba(0, 14, 42, 0.2);
+  overflow: hidden;
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    background 0.28s ease;
+}
+
+.contact-data-card::after {
+  content: "";
+  position: absolute;
+  right: -38px;
+  bottom: -38px;
+  width: 126px;
+  height: 126px;
+  border: 1px solid rgba(201, 244, 255, 0.2);
+  border-radius: 50%;
+}
+
+.contact-data-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(201, 244, 255, 0.6);
+  background: rgba(8, 56, 120, 0.84);
+}
+
+.contact-data-card span {
+  display: block;
+  margin-bottom: 52px;
+  color: var(--blue-400);
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.contact-data-card p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.contact-blueprint {
+  position: relative;
+  display: grid;
+  gap: 18px;
+  min-height: 330px;
+  padding: 20px;
+  border: 1px solid rgba(201, 244, 255, 0.24);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(86, 184, 255, 0.18), transparent 58%),
+    linear-gradient(rgba(201, 244, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 244, 255, 0.07) 1px, transparent 1px),
+    rgba(3, 25, 58, 0.72);
+  background-size: auto, 24px 24px, 24px 24px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.contact-blueprint::before {
+  content: "";
+  position: absolute;
+  inset: -30%;
+  background: conic-gradient(from 180deg, transparent 0 38%, rgba(201, 244, 255, 0.18), transparent 58% 100%);
+  animation: rotateSpec 14s linear infinite;
+}
+
+.contact-blueprint-head,
+.contact-blueprint-foot {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.contact-draft {
+  position: relative;
+  z-index: 1;
+  min-height: 210px;
+  border: 1px solid rgba(201, 244, 255, 0.18);
+  overflow: hidden;
+}
+
+.draft-line,
+.draft-node {
+  position: absolute;
+  display: block;
+}
+
+.draft-line {
+  height: 2px;
+  background: linear-gradient(90deg, rgba(201, 244, 255, 0.04), rgba(201, 244, 255, 0.88), rgba(201, 244, 255, 0.04));
+  transform-origin: left;
+  animation: railDraw 2.4s ease forwards;
+}
+
+.draft-line.line-1 {
+  top: 30%;
+  left: 8%;
+  width: 72%;
+}
+
+.draft-line.line-2 {
+  top: 52%;
+  left: 18%;
+  width: 66%;
+  animation-delay: 0.35s;
+}
+
+.draft-line.line-3 {
+  top: 74%;
+  left: 10%;
+  width: 80%;
+  animation-delay: 0.7s;
+}
+
+.draft-node {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(247, 251, 255, 0.92);
+  border-radius: 50%;
+  background: rgba(86, 184, 255, 0.18);
+  box-shadow: 0 0 18px rgba(86, 184, 255, 0.42);
+  animation: nodeSignal 2.8s ease-in-out infinite;
+}
+
+.draft-node.node-1 {
+  top: calc(30% - 7px);
+  left: 20%;
+}
+
+.draft-node.node-2 {
+  top: calc(52% - 7px);
+  left: 62%;
+  animation-delay: 0.45s;
+}
+
+.draft-node.node-3 {
+  top: calc(74% - 7px);
+  left: 38%;
+  animation-delay: 0.9s;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -1700,6 +1944,11 @@ html[lang="de"] .page-hero h1 {
     align-items: flex-start;
     flex-direction: column;
     padding: 38px 24px;
+  }
+
+  .contact-brief,
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -2089,14 +2338,16 @@ html[lang="de"] .page-hero h1 {
   .service-grid,
   .type-grid,
   .timeline,
-  .process-rail {
+  .process-rail,
+  .contact-grid {
     gap: 12px;
   }
 
   .service-card,
   .type-card,
   .timeline-item,
-  .process-stop {
+  .process-stop,
+  .contact-data-card {
     min-height: auto;
     padding: 20px;
   }
@@ -2147,6 +2398,38 @@ html[lang="de"] .page-hero h1 {
 
   .contact h2 {
     font-size: clamp(1.8rem, 10vw, 2.8rem);
+  }
+
+  .contact-brief {
+    padding: 24px 18px;
+  }
+
+  .contact-brief p:not(.eyebrow) {
+    font-size: 0.95rem;
+    line-height: 1.62;
+  }
+
+  .contact-mail-card {
+    min-height: 136px;
+    padding: 18px;
+  }
+
+  .contact-data-card span {
+    margin-bottom: 28px;
+  }
+
+  .contact-blueprint {
+    min-height: 260px;
+    padding: 16px;
+  }
+
+  .contact-blueprint-head,
+  .contact-blueprint-foot {
+    display: grid;
+  }
+
+  .contact-draft {
+    min-height: 170px;
   }
 }
 
@@ -2237,6 +2520,7 @@ html[lang="de"] .page-hero h1 {
   .type-card,
   .timeline-item,
   .process-stop,
+  .contact-data-card,
   .contact {
     padding-left: 16px;
     padding-right: 16px;

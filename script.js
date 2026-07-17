@@ -157,7 +157,26 @@ const translations = {
     },
     contact: {
       eyebrow: "Kapcsolat",
-      title: "Kezdjük el a következő híd tervét."
+      title: "Kezdjük el a következő híd tervét.",
+      briefEyebrow: "Projektindítás",
+      briefTitle: "Küldj rövid műszaki kiindulást.",
+      briefCopy: "A legjobb első üzenet tartalmazza a helyszínt, a szerkezet típusát, a tervezési fázist és a rendelkezésre álló alapadatokat.",
+      mailLabel: "Közvetlen email",
+      card1: {
+        title: "Helyszín és cél",
+        copy: "Hol készül a szerkezet, milyen funkciót szolgál, és milyen döntés előtt áll a projekt?"
+      },
+      card2: {
+        title: "Meglévő alapadatok",
+        copy: "Geodézia, fotók, korábbi rajzok, geotechnika vagy hatósági elvárások segítik a pontos indulást."
+      },
+      card3: {
+        title: "Tervezési fázis",
+        copy: "Koncepció, engedélyezés, kiviteli terv vagy meglévő szerkezet felülvizsgálata."
+      },
+      blueprintStatus: "brief ellenőrzés",
+      output1: "válasz műszaki iránnyal",
+      output2: "következő egyeztetési lépés"
     }
   },
   en: {
@@ -278,7 +297,26 @@ const translations = {
     },
     contact: {
       eyebrow: "Contact",
-      title: "Let us start the next bridge plan."
+      title: "Let us start the next bridge plan.",
+      briefEyebrow: "Project start",
+      briefTitle: "Send a short technical starting point.",
+      briefCopy: "The best first message includes the location, structure type, design stage and available base information.",
+      mailLabel: "Direct email",
+      card1: {
+        title: "Site and purpose",
+        copy: "Where will the structure be built, what function will it serve, and what decision is the project facing?"
+      },
+      card2: {
+        title: "Available inputs",
+        copy: "Survey data, photos, previous drawings, geotechnics or authority requirements help start accurately."
+      },
+      card3: {
+        title: "Design stage",
+        copy: "Concept, permit design, construction drawings or review of an existing structure."
+      },
+      blueprintStatus: "brief review",
+      output1: "response with technical direction",
+      output2: "next coordination step"
     }
   },
   de: {
@@ -399,7 +437,26 @@ const translations = {
     },
     contact: {
       eyebrow: "Kontakt",
-      title: "Beginnen wir mit dem nächsten Brückenplan."
+      title: "Beginnen wir mit dem nächsten Brückenplan.",
+      briefEyebrow: "Projektstart",
+      briefTitle: "Senden Sie einen kurzen technischen Ausgangspunkt.",
+      briefCopy: "Die beste erste Nachricht enthält Standort, Bauwerkstyp, Planungsphase und verfügbare Grundlagendaten.",
+      mailLabel: "Direkte E-Mail",
+      card1: {
+        title: "Standort und Ziel",
+        copy: "Wo entsteht das Bauwerk, welche Funktion erfüllt es, und vor welcher Entscheidung steht das Projekt?"
+      },
+      card2: {
+        title: "Vorhandene Grundlagen",
+        copy: "Vermessung, Fotos, frühere Pläne, Geotechnik oder behördliche Anforderungen helfen beim präzisen Start."
+      },
+      card3: {
+        title: "Planungsphase",
+        copy: "Konzept, Genehmigungsplanung, Ausführungsplanung oder Prüfung eines bestehenden Bauwerks."
+      },
+      blueprintStatus: "Brief-Prüfung",
+      output1: "Antwort mit technischer Richtung",
+      output2: "nächster Abstimmungsschritt"
     }
   }
 };
