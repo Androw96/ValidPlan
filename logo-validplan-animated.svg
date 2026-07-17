@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2036 913" role="img" aria-labelledby="validplanLogoTitle">
+  <title id="validplanLogoTitle">ValidPlan animated logo</title>
+  <defs>
+    <style>
+      .logo-source {
+        opacity: 1;
+      }
+
+      .reveal-mask {
+        transform-box: fill-box;
+        transform-origin: left center;
+        transform: scaleX(0);
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+      }
+
+      #valiMaskRect {
+        animation-name: revealMask;
+        animation-duration: 0.8s;
+      }
+
+      #dMaskRect {
+        animation-name: revealMask;
+        animation-duration: 0.75s;
+        animation-delay: 0.8s;
+      }
+
+      #planMaskRect {
+        animation-name: revealMask;
+        animation-duration: 0.8s;
+        animation-delay: 1.55s;
+      }
+
+      #swooshMaskPath {
+        stroke-dasharray: 2140;
+        stroke-dashoffset: 2140;
+        animation: traceSwoosh 1s ease-in-out 2.35s forwards;
+      }
+
+      @keyframes revealMask {
+        to { transform: scaleX(1); }
+      }
+
+      @keyframes traceSwoosh {
+        to { stroke-dashoffset: 0; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .reveal-mask {
+          transform: scaleX(1);
+          animation: none;
+        }
+
+        #swooshMaskPath {
+          stroke-dashoffset: 0;
+          animation: none;
+        }
+      }
+    </style>
+
+    <clipPath id="valiClip">
+      <rect x="0" y="500" width="786" height="413" />
+    </clipPath>
+
+    <clipPath id="dClip">
+      <rect x="686" y="0" width="392" height="355" />
+      <rect x="686" y="355" width="95" height="558" />
+      <rect x="962" y="355" width="116" height="558" />
+      <rect x="772" y="500" width="306" height="413" />
+    </clipPath>
+
+    <clipPath id="planClip">
+      <rect x="1075" y="500" width="961" height="413" />
+    </clipPath>
+
+    <clipPath id="swooshClip">
+      <rect x="0" y="250" width="2036" height="315" />
+    </clipPath>
+
+    <mask id="valiMask" maskUnits="userSpaceOnUse">
+      <rect id="valiMaskRect" class="reveal-mask" x="0" y="500" width="786" height="413" fill="#fff" />
+    </mask>
+
+    <mask id="dMask" maskUnits="userSpaceOnUse">
+      <rect id="dMaskRect" class="reveal-mask" x="686" y="0" width="392" height="913" fill="#fff" />
+    </mask>
+
+    <mask id="planMask" maskUnits="userSpaceOnUse">
+      <rect id="planMaskRect" class="reveal-mask" x="1075" y="500" width="961" height="413" fill="#fff" />
+    </mask>
+
+    <mask id="swooshMask" maskUnits="userSpaceOnUse">
+      <path
+        id="swooshMaskPath"
+        d="M140 470 C470 260 1580 260 1906 470"
+        fill="none"
+        stroke="#fff"
+        stroke-width="140"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </mask>
+  </defs>
+
+  <g clip-path="url(#valiClip)" mask="url(#valiMask)">
+    <image class="logo-source" href="logo-validplan-new.png" x="0" y="0" width="2036" height="913" />
+  </g>
+
+  <g clip-path="url(#dClip)" mask="url(#dMask)">
+    <image class="logo-source" href="logo-validplan-new.png" x="0" y="0" width="2036" height="913" />
+  </g>
+
+  <g clip-path="url(#planClip)" mask="url(#planMask)">
+    <image class="logo-source" href="logo-validplan-new.png" x="0" y="0" width="2036" height="913" />
+  </g>
+
+  <g clip-path="url(#swooshClip)" mask="url(#swooshMask)">
+    <image class="logo-source" href="logo-validplan-new.png" x="0" y="0" width="2036" height="913" />
+  </g>
+</svg>
