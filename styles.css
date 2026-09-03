@@ -1272,19 +1272,20 @@ h3 {
 }
 
 .page-hero h1 {
-  max-width: min(760px, 100%);
+  max-width: min(1120px, 100%);
   margin-bottom: 0;
-  font-size: clamp(2.15rem, 5.1vw, 4.8rem);
+  font-size: clamp(2.15rem, 4.7vw, 4.45rem);
   line-height: 0.98;
   letter-spacing: 0;
   white-space: normal;
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
   word-break: normal;
-  hyphens: auto;
+  hyphens: none;
+  text-wrap: balance;
 }
 
 html[lang="de"] .page-hero h1 {
-  font-size: clamp(2rem, 4.45vw, 4.15rem);
+  font-size: clamp(2rem, 4.15vw, 3.95rem);
 }
 
 .page-hero p:last-child {
@@ -3632,7 +3633,9 @@ html[lang="de"] .page-hero h1 {
   html[lang="de"] .page-hero h1 {
     font-size: clamp(1.8rem, 9.2vw, 2.9rem);
     line-height: 1.05;
-    overflow-wrap: anywhere;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
   }
 
   .page-hero p:last-child {
