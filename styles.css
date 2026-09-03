@@ -1962,11 +1962,13 @@ html[lang="de"] .page-hero h1 {
   border: 1px solid rgba(4, 90, 170, 0.24);
   border-radius: 8px;
   background:
-    linear-gradient(rgba(4, 90, 170, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(4, 90, 170, 0.035) 1px, transparent 1px),
-    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.72), transparent 48%),
-    #edf2f1;
-  background-size: 28px 28px, 28px 28px, auto, auto;
+    linear-gradient(rgba(14, 86, 143, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 86, 143, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(14, 86, 143, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 86, 143, 0.035) 1px, transparent 1px),
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.58), transparent 52%),
+    linear-gradient(135deg, #e8f2f7 0%, #d7e8f1 48%, #c8dbe7 100%);
+  background-size: 112px 112px, 112px 112px, 28px 28px, 28px 28px, auto, auto;
   cursor: grab;
   overflow: hidden;
   perspective: 900px;
