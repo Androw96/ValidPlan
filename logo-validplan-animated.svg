@@ -16,37 +16,39 @@
 
       #valiMaskRect {
         animation-name: revealMask;
-        animation-duration: 0.8s;
+        animation-duration: 0.58s;
       }
 
       #dLetterMaskRect {
         animation-name: revealMask;
-        animation-duration: 0.45s;
-        animation-delay: 0.8s;
+        animation-duration: 0.32s;
+        animation-delay: 0.56s;
       }
 
       .d-extension-main {
-        stroke-dasharray: 1750;
-        stroke-dashoffset: 1750;
-        animation: traceExtension 0.82s ease-in-out 1.16s forwards;
+        opacity: 1;
+        stroke-dasharray: 1;
+        stroke-dashoffset: 1;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
       }
 
-      .d-extension-cross {
-        stroke-dasharray: 420;
-        stroke-dashoffset: 420;
-        animation: traceExtension 0.42s ease-in-out 1.48s forwards;
+      #dExtensionPath {
+        animation-name: traceExtension;
+        animation-duration: 0.72s;
+        animation-delay: 0.86s;
       }
 
       #planMaskRect {
         animation-name: revealMask;
-        animation-duration: 0.8s;
-        animation-delay: 1.98s;
+        animation-duration: 0.58s;
+        animation-delay: 1.58s;
       }
 
       #swooshMaskPath {
-        stroke-dasharray: 2140;
-        stroke-dashoffset: 2140;
-        animation: traceSwoosh 1s ease-in-out 2.78s forwards;
+        stroke-dasharray: 1850;
+        stroke-dashoffset: 1850;
+        animation: traceSwoosh 0.72s ease-in-out 2.12s forwards;
       }
 
       @keyframes revealMask {
@@ -67,9 +69,8 @@
           animation: none;
         }
 
-        .d-extension-main,
-        .d-extension-cross,
-        #swooshMaskPath {
+      #dExtensionPath,
+      #swooshMaskPath {
           stroke-dashoffset: 0;
           animation: none;
         }
@@ -82,21 +83,10 @@
 
     <clipPath id="dLetterClip">
       <rect x="772" y="500" width="306" height="413" />
-      <rect x="962" y="355" width="116" height="558" />
-    </clipPath>
-
-    <clipPath id="dExtensionClip">
-      <rect x="686" y="0" width="392" height="355" />
-      <rect x="686" y="355" width="95" height="558" />
-      <rect x="962" y="355" width="116" height="558" />
     </clipPath>
 
     <clipPath id="planClip">
       <rect x="1075" y="500" width="961" height="413" />
-    </clipPath>
-
-    <clipPath id="swooshClip">
-      <rect x="0" y="250" width="2036" height="315" />
     </clipPath>
 
     <mask id="valiMask" maskUnits="userSpaceOnUse">
@@ -107,27 +97,6 @@
       <rect id="dLetterMaskRect" class="reveal-mask" x="772" y="500" width="306" height="413" fill="#fff" />
     </mask>
 
-    <mask id="dExtensionMask" maskUnits="userSpaceOnUse">
-      <path
-        class="d-extension-main"
-        d="M1018 615 V58 H721 V462"
-        fill="none"
-        stroke="#fff"
-        stroke-width="118"
-        stroke-linecap="square"
-        stroke-linejoin="miter"
-      />
-      <path
-        class="d-extension-cross"
-        d="M1018 355 H721"
-        fill="none"
-        stroke="#fff"
-        stroke-width="74"
-        stroke-linecap="square"
-        stroke-linejoin="miter"
-      />
-    </mask>
-
     <mask id="planMask" maskUnits="userSpaceOnUse">
       <rect id="planMaskRect" class="reveal-mask" x="1075" y="500" width="961" height="413" fill="#fff" />
     </mask>
@@ -135,14 +104,15 @@
     <mask id="swooshMask" maskUnits="userSpaceOnUse">
       <path
         id="swooshMaskPath"
-        d="M140 470 C470 260 1580 260 1906 470"
+        d="M140 520 C470 280 1580 280 1906 520"
         fill="none"
         stroke="#fff"
-        stroke-width="140"
+        stroke-width="120"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
     </mask>
+
   </defs>
 
   <g clip-path="url(#valiClip)" mask="url(#valiMask)">
@@ -153,15 +123,26 @@
     <image class="logo-source" href="logo-validplan-new.png" x="0" y="0" width="2036" height="913" />
   </g>
 
-  <g clip-path="url(#dExtensionClip)" mask="url(#dExtensionMask)">
-    <image class="logo-source" href="logo-validplan-new.png" x="0" y="0" width="2036" height="913" />
-  </g>
+  <path
+    id="dExtensionPath"
+    class="d-extension-main"
+    pathLength="1"
+    d="M1024 500 V175 H810 V500"
+    fill="none"
+    stroke="#0070ff"
+    stroke-width="60"
+    stroke-linecap="square"
+    stroke-linejoin="miter"
+  />
 
   <g clip-path="url(#planClip)" mask="url(#planMask)">
     <image class="logo-source" href="logo-validplan-new.png" x="0" y="0" width="2036" height="913" />
   </g>
 
-  <g clip-path="url(#swooshClip)" mask="url(#swooshMask)">
-    <image class="logo-source" href="logo-validplan-new.png" x="0" y="0" width="2036" height="913" />
-  </g>
+  <path
+    id="swooshShape"
+    d="M140 520 C470 282 1580 282 1906 520 C1515 398 525 398 140 520 Z"
+    fill="#0070ff"
+    mask="url(#swooshMask)"
+  />
 </svg>

@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title data-i18n="meta.title">ValidPlan | Hídtervezés és építőipari mérnöki tervezés</title>
-    <link rel="icon" href="logo.jpeg" />
+    <link rel="icon" type="image/svg+xml" href="favicon-validplan.svg?v=20260903-favicon-2" />
+    <link rel="alternate icon" type="image/png" href="favicon-32.png?v=20260903-favicon-2" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png?v=20260903-favicon-2" />
     <meta
       name="description"
       content="ValidPlan - modern építőipari tervezés, hídtervezés, statikai koncepciók és műszaki dokumentáció."
@@ -16,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260717-ref-2" />
+    <link rel="stylesheet" href="styles.css?v=20260903-sequence-animation-1" />
   </head>
   <body data-intro-entry="true">
     <div class="cursor-glow" aria-hidden="true"></div>
@@ -27,7 +29,13 @@
       </a>
       <nav class="nav-links" aria-label="Fő navigáció" data-i18n-attr="aria-label:nav.aria">
         <a href="expertise.html" data-i18n="nav.expertise">Szakértelem</a>
-        <a href="bridges.html" data-i18n="nav.bridges">Hidak</a>
+        <div class="nav-group">
+          <button class="nav-parent" type="button" data-i18n="nav.about" aria-haspopup="true" aria-expanded="false">Rólunk</button>
+          <div class="nav-submenu">
+            <a href="building.html" data-i18n="nav.building">Magasépítés</a>
+            <a href="bridges.html" data-i18n="nav.bridges">Hidak</a>
+          </div>
+        </div>
         <a href="references.html" data-i18n="nav.references">Referenciák</a>
         <a href="process.html" data-i18n="nav.process">Folyamat</a>
         <a href="contact.html" data-i18n="nav.contact">Kapcsolat</a>
@@ -80,7 +88,7 @@
             <span data-i18n="reference.latestKicker">Legutóbbi referencia</span>
             <span>2B117</span>
           </div>
-          <div class="bridge-scene">
+          <div class="reference-scene">
             <div class="scan-line"></div>
             <a class="latest-reference" href="references/22_2B117_02.01_E_V05.pdf" target="_blank" rel="noopener">
               <span class="reference-paper">
@@ -148,15 +156,121 @@
         </div>
       </section>
 
-      <section class="contact section-pad reveal">
-        <div>
-          <p class="eyebrow" data-i18n="contact.eyebrow">Kapcsolat</p>
-          <h2 data-i18n="contact.title">Kezdjük el a következő híd tervét.</h2>
+      <section class="landing-process section-pad reveal">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="landingProcess.eyebrow">Folyamatábra</p>
+          <h2 data-i18n="landingProcess.title">A projekt lépései már az első egyeztetésnél láthatók</h2>
         </div>
-        <a class="primary-button" href="mailto:info@validplan.hu">info@validplan.hu</a>
+        <div class="landing-process-track">
+          <article>
+            <span>01</span>
+            <strong data-i18n="landingProcess.step1">Kiindulási adatok</strong>
+          </article>
+          <article>
+            <span>02</span>
+            <strong data-i18n="landingProcess.step2">Szerkezeti koncepció</strong>
+          </article>
+          <article>
+            <span>03</span>
+            <strong data-i18n="landingProcess.step3">Számítás és modell</strong>
+          </article>
+          <article>
+            <span>04</span>
+            <strong data-i18n="landingProcess.step4">Kiviteli tervcsomag</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="software-section section-pad reveal">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="software.eyebrow">Szoftver háttér</p>
+          <h2 data-i18n="software.title">Mérnöki eszközök, amelyekben a tervek készülnek</h2>
+        </div>
+        <div class="software-grid">
+          <article>
+            <h3 data-i18n="software.bridgeTitle">Hídépítő szoftverek</h3>
+            <ul>
+              <li data-i18n="software.bridge1">AxisVM és végeselemes modellezés</li>
+              <li data-i18n="software.bridge2">AutoCAD / Civil 3D tervlapok</li>
+              <li data-i18n="software.bridge3">IDEA StatiCa csomóponti ellenőrzések</li>
+              <li data-i18n="software.bridge4">Sofistik / hídstatikai munkafolyamatok</li>
+            </ul>
+          </article>
+          <article>
+            <h3 data-i18n="software.buildingTitle">Magasépítő szoftverek</h3>
+            <ul>
+              <li data-i18n="software.building1">Revit és BIM-koordináció</li>
+              <li data-i18n="software.building2">Tekla Structures acél- és vasbeton részletek</li>
+              <li data-i18n="software.building3">FEM-Design tartószerkezeti modellek</li>
+              <li data-i18n="software.building4">Allplan / részletrajzi dokumentáció</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="partners-section section-pad reveal">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="partners.eyebrow">Partnereink</p>
+          <h2 data-i18n="partners.title">Együttműködések és projektkörnyezet</h2>
+        </div>
+        <div class="partner-grid">
+          <article>
+            <span>HU</span>
+            <strong data-i18n="partners.country">Magyarország</strong>
+          </article>
+          <article>
+            <span>01</span>
+            <strong data-i18n="partners.placeholder1">Generáltervező partner</strong>
+          </article>
+          <article>
+            <span>02</span>
+            <strong data-i18n="partners.placeholder2">Kivitelezői egyeztetés</strong>
+          </article>
+          <article>
+            <span>03</span>
+            <strong data-i18n="partners.placeholder3">Önkormányzati / beruházói kapcsolat</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact contact-form-section section-pad reveal">
+        <div class="contact-form-copy">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Kapcsolat</p>
+          <h2 data-i18n="contact.title">Lépj kapcsolatba a ValidPlannel.</h2>
+          <p data-i18n="contact.briefCopy">A legjobb első üzenet tartalmazza a helyszínt, a szerkezet típusát, a tervezési fázist és a rendelkezésre álló alapadatokat.</p>
+        </div>
+        <form class="contact-form" data-contact-form>
+          <h3 data-i18n="contact.formTitle">Kapcsolati űrlap</h3>
+          <label>
+            <span data-i18n="contact.name">Név</span>
+            <input name="name" type="text" required />
+          </label>
+          <label>
+            <span data-i18n="contact.reason">Ok / projekt rövid leírása</span>
+            <textarea name="reason" rows="4" required></textarea>
+          </label>
+          <div class="form-row">
+            <label>
+              <span data-i18n="contact.phone">Telefon</span>
+              <input name="phone" type="tel" required />
+            </label>
+            <label>
+              <span data-i18n="contact.email">E-mail</span>
+              <input name="email" type="email" required />
+            </label>
+          </div>
+          <label class="file-field">
+            <span data-i18n="contact.pdf">PDF opcionális</span>
+            <input name="pdf" type="file" accept="application/pdf" data-contact-pdf />
+            <small data-i18n="contact.pdfHelp">Tervekhez PDF-et is kiválaszthatsz; az email kliensben csatold majd a fájlt.</small>
+            <em data-contact-file-name></em>
+          </label>
+          <button class="primary-button" type="submit" data-i18n="contact.submit">Email előkészítése</button>
+          <p class="form-status" data-contact-status></p>
+        </form>
       </section>
     </main>
 
-    <script src="script.js?v=20260717-ref-2"></script>
+    <script src="script.js?v=20260903-sequence-animation-1"></script>
   </body>
 </html>

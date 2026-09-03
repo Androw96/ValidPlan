@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ValidPlan Intro | Képkockák</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #061a35;
+        --panel: rgba(255, 255, 255, 0.07);
+        --line: rgba(255, 255, 255, 0.16);
+        --text: #eef7ff;
+        --muted: rgba(238, 247, 255, 0.72);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(0deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          radial-gradient(circle at 24% 18%, rgba(0, 112, 255, 0.22), transparent 32%),
+          linear-gradient(135deg, #06162c 0%, var(--bg) 52%, #0a3670 100%);
+        background-size: 24px 24px, 24px 24px, auto, auto;
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      main {
+        width: min(1320px, calc(100vw - 32px));
+        margin: 0 auto;
+        padding: 32px 0 48px;
+      }
+
+      header {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 0 0 22px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(1.65rem, 3vw, 3rem);
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 8px 0 0;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      a {
+        color: #cfe7ff;
+        text-decoration: none;
+      }
+
+      .sequence-link {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px 14px;
+        background: rgba(255, 255, 255, 0.07);
+        white-space: nowrap;
+      }
+
+      .frame-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      figure {
+        margin: 0;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        box-shadow: 0 18px 48px rgba(0, 0, 0, 0.2);
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        background: #061a35;
+      }
+
+      figcaption {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 10px 12px;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      strong {
+        color: var(--text);
+        font-weight: 700;
+      }
+
+      @media (max-width: 900px) {
+        header {
+          align-items: start;
+          flex-direction: column;
+        }
+
+        .frame-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>Intro animáció képkockák</h1>
+          <p>A mostani élő SVG intro animációból mentett sorozat. Írd meg, melyik képkockánál térjünk el.</p>
+        </div>
+        <a class="sequence-link" href="../intro-sequence/index.html">Eredeti sequence</a>
+      </header>
+
+      <section class="frame-grid" aria-label="Intro animáció képkockái">
+        <figure>
+          <img src="00-blank-start.png?v=20260903-final-intro-1" alt="00 Blank start" />
+          <figcaption><strong>00</strong><span>Blank start</span></figcaption>
+        </figure>
+        <figure>
+          <img src="01-vali-start.png?v=20260903-final-intro-1" alt="01 Vali start" />
+          <figcaption><strong>01</strong><span>Vali start</span></figcaption>
+        </figure>
+        <figure>
+          <img src="02-vali-visible.png?v=20260903-final-intro-1" alt="02 Vali visible" />
+          <figcaption><strong>02</strong><span>Vali visible</span></figcaption>
+        </figure>
+        <figure>
+          <img src="03-d-start.png?v=20260903-final-intro-1" alt="03 D start" />
+          <figcaption><strong>03</strong><span>D start</span></figcaption>
+        </figure>
+        <figure>
+          <img src="04-d-visible.png?v=20260903-final-intro-1" alt="04 D visible" />
+          <figcaption><strong>04</strong><span>D visible</span></figcaption>
+        </figure>
+        <figure>
+          <img src="05-d-stem-rising.png?v=20260903-final-intro-1" alt="05 D stem rising" />
+          <figcaption><strong>05</strong><span>D stem rising</span></figcaption>
+        </figure>
+        <figure>
+          <img src="06-d-top-line.png?v=20260903-final-intro-1" alt="06 D top line" />
+          <figcaption><strong>06</strong><span>D top line</span></figcaption>
+        </figure>
+        <figure>
+          <img src="07-d-left-line.png?v=20260903-final-intro-1" alt="07 D left line" />
+          <figcaption><strong>07</strong><span>D left line</span></figcaption>
+        </figure>
+        <figure>
+          <img src="08-plan-start.png?v=20260903-final-intro-1" alt="08 Plan start" />
+          <figcaption><strong>08</strong><span>Plan start</span></figcaption>
+        </figure>
+        <figure>
+          <img src="09-plan-visible.png?v=20260903-final-intro-1" alt="09 Plan visible" />
+          <figcaption><strong>09</strong><span>Plan visible</span></figcaption>
+        </figure>
+        <figure>
+          <img src="10-swoosh-start.png?v=20260903-final-intro-1" alt="10 Swoosh start" />
+          <figcaption><strong>10</strong><span>Swoosh start</span></figcaption>
+        </figure>
+        <figure>
+          <img src="11-swoosh-drawing.png?v=20260903-final-intro-1" alt="11 Swoosh drawing" />
+          <figcaption><strong>11</strong><span>Swoosh drawing</span></figcaption>
+        </figure>
+        <figure>
+          <img src="12-final-logo.png?v=20260903-final-intro-1" alt="12 Final logo" />
+          <figcaption><strong>12</strong><span>Final logo</span></figcaption>
+        </figure>
+      </section>
+    </main>
+  </body>
+</html>

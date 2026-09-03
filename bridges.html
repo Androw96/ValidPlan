@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title data-i18n="meta.title">ValidPlan | Hídtervezés és építőipari mérnöki tervezés</title>
-    <link rel="icon" href="logo.jpeg" />
+    <link rel="icon" type="image/svg+xml" href="favicon-validplan.svg?v=20260903-favicon-2" />
+    <link rel="alternate icon" type="image/png" href="favicon-32.png?v=20260903-favicon-2" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png?v=20260903-favicon-2" />
     <meta
       name="description"
       content="ValidPlan - modern építőipari tervezés, hídtervezés, statikai koncepciók és műszaki dokumentáció."
@@ -16,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260717-ref-2" />
+    <link rel="stylesheet" href="styles.css?v=20260903-sequence-animation-1" />
   </head>
   <body>
     <div class="cursor-glow" aria-hidden="true"></div>
@@ -27,7 +29,13 @@
       </a>
       <nav class="nav-links" aria-label="Fő navigáció" data-i18n-attr="aria-label:nav.aria">
         <a href="expertise.html" data-i18n="nav.expertise">Szakértelem</a>
-        <a class="is-current" href="bridges.html" data-i18n="nav.bridges">Hidak</a>
+        <div class="nav-group is-current">
+          <button class="nav-parent" type="button" data-i18n="nav.about" aria-haspopup="true" aria-expanded="false">Rólunk</button>
+          <div class="nav-submenu">
+            <a href="building.html" data-i18n="nav.building">Magasépítés</a>
+            <a class="is-current" href="bridges.html" data-i18n="nav.bridges">Hidak</a>
+          </div>
+        </div>
         <a href="references.html" data-i18n="nav.references">Referenciák</a>
         <a href="process.html" data-i18n="nav.process">Folyamat</a>
         <a href="contact.html" data-i18n="nav.contact">Kapcsolat</a>
@@ -52,24 +60,47 @@
       </section>
 
       <section class="bridge-types section-pad">
-        <div class="bridge-system reveal">
-          <div class="bridge-system-copy">
-            <span data-i18n="bridges.diagram.kicker">Terhelés -> szerkezet -> részlet</span>
-            <strong data-i18n="bridges.diagram.title">A híd logikája láthatóvá válik</strong>
+        <section class="bridge-model-showcase reveal" aria-labelledby="bridge-model-title">
+          <div class="bridge-model-copy">
+            <p class="eyebrow">3D hídmodell</p>
+            <h2 id="bridge-model-title">Forgatható hídnézet OBJ modellből</h2>
+            <p>
+              A hid 3d.obj modell webre optimalizált változata jelenik meg, a hozzá tartozó
+              MTL anyagfájl beton, aszfalt és acél felületeivel. Húzd az egeret vagy az ujjad
+              a nézeten a forgatáshoz.
+            </p>
+            <div class="material-list" data-bridge-materials>
+              <span>Anyagok betöltése...</span>
+            </div>
           </div>
-          <svg class="bridge-system-drawing" viewBox="0 0 920 260" aria-hidden="true">
-            <path class="bridge-load-path" d="M92 160 C260 52 660 52 828 160" />
-            <path class="bridge-deck-path" d="M92 160 H828" />
-            <path class="bridge-foundation-path" d="M160 160 V222 H238 V160 M682 160 V222 H760 V160" />
-            <path class="bridge-hangers-path" d="M214 130 V160 M306 96 V160 M398 78 V160 M490 74 V160 M582 88 V160 M674 118 V160" />
-            <path class="bridge-flow-path" d="M104 190 H264 L300 172 H430 L464 190 H620 L660 172 H816" />
-            <g class="bridge-nodes">
-              <circle cx="160" cy="160" r="9" />
-              <circle cx="460" cy="76" r="9" />
-              <circle cx="760" cy="160" r="9" />
-            </g>
-          </svg>
-        </div>
+          <div class="bridge-viewport" data-bridge-viewer aria-label="Forgatható 3D hídmodell">
+            <canvas class="bridge-model-canvas" data-bridge-canvas aria-hidden="true"></canvas>
+            <div class="bridge-rotate-hints" aria-hidden="true">
+              <span class="bridge-rotate-arrow arrow-up">↑</span>
+              <span class="bridge-rotate-arrow arrow-right">→</span>
+              <span class="bridge-rotate-arrow arrow-down">↓</span>
+              <span class="bridge-rotate-arrow arrow-left">←</span>
+            </div>
+            <div class="bridge-zoom-control" aria-label="3D modell zoom">
+              <button type="button" data-bridge-zoom="out" aria-label="Kicsinyítés">-</button>
+              <input type="range" min="0.72" max="1.95" step="0.01" value="1" data-bridge-zoom-slider aria-label="Nagyítás" />
+              <button type="button" data-bridge-zoom="in" aria-label="Nagyítás">+</button>
+            </div>
+            <div class="bridge-scene" data-bridge-scene>
+              <div class="bridge3d deck"></div>
+              <div class="bridge3d asphalt"></div>
+              <div class="bridge3d arch"></div>
+              <div class="bridge3d arch arch-back"></div>
+              <div class="bridge3d pier pier-left"></div>
+              <div class="bridge3d pier pier-right"></div>
+              <div class="bridge3d cable cable-1"></div>
+              <div class="bridge3d cable cable-2"></div>
+              <div class="bridge3d cable cable-3"></div>
+              <div class="bridge3d cable cable-4"></div>
+            </div>
+          </div>
+        </section>
+
         <div class="type-grid">
           <article class="type-card reveal">
             <span data-i18n="bridges.type1.meta">Gyalogos hidak</span>
@@ -90,6 +121,6 @@
       </section>
     </main>
 
-    <script src="script.js?v=20260717-ref-2"></script>
+    <script src="script.js?v=20260903-sequence-animation-1"></script>
   </body>
 </html>

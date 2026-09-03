@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title data-i18n="meta.title">ValidPlan | Hídtervezés és építőipari mérnöki tervezés</title>
-    <link rel="icon" href="logo.jpeg" />
+    <link rel="icon" type="image/svg+xml" href="favicon-validplan.svg?v=20260903-favicon-2" />
+    <link rel="alternate icon" type="image/png" href="favicon-32.png?v=20260903-favicon-2" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png?v=20260903-favicon-2" />
     <meta
       name="description"
       content="ValidPlan - modern építőipari tervezés, hídtervezés, statikai koncepciók és műszaki dokumentáció."
@@ -16,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260717-ref-2" />
+    <link rel="stylesheet" href="styles.css?v=20260903-sequence-animation-1" />
   </head>
   <body>
     <div class="cursor-glow" aria-hidden="true"></div>
@@ -27,7 +29,13 @@
       </a>
       <nav class="nav-links" aria-label="Fő navigáció" data-i18n-attr="aria-label:nav.aria">
         <a href="expertise.html" data-i18n="nav.expertise">Szakértelem</a>
-        <a href="bridges.html" data-i18n="nav.bridges">Hidak</a>
+        <div class="nav-group">
+          <button class="nav-parent" type="button" data-i18n="nav.about" aria-haspopup="true" aria-expanded="false">Rólunk</button>
+          <div class="nav-submenu">
+            <a href="building.html" data-i18n="nav.building">Magasépítés</a>
+            <a href="bridges.html" data-i18n="nav.bridges">Hidak</a>
+          </div>
+        </div>
         <a href="references.html" data-i18n="nav.references">Referenciák</a>
         <a class="is-current" href="process.html" data-i18n="nav.process">Folyamat</a>
         <a href="contact.html" data-i18n="nav.contact">Kapcsolat</a>
@@ -94,6 +102,6 @@
       </section>
     </main>
 
-    <script src="script.js?v=20260717-ref-2"></script>
+    <script src="script.js?v=20260903-sequence-animation-1"></script>
   </body>
 </html>
