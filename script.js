@@ -98,10 +98,52 @@ const translations = {
     },
     page: {
       expertiseLead: "A ValidPlan a szerkezeti logikát, a részletek kivitelezhetőségét és a tiszta dokumentációt egyetlen tervezési rendszerként kezeli.",
+      aboutLead: "A ValidPlan Kft. a közúti hidak, mérnöki műtárgyak és építési szerkezetek tervdokumentációját készíti átlátható, kivitelezhető mérnöki logikával.",
       buildingLead: "A magasépítési oldal a tartószerkezeti gondolkodást, a dokumentált döntéseket és a kivitelezhető részleteket helyezi középpontba.",
       bridgesLead: "A hídoldal külön mutatja meg, milyen szerkezeti helyzetekre készülhet koncepció, statika és kivitelezhető részletterv.",
       processLead: "A folyamatoldal a projekt döntési pontjait választja szét, hogy az igényfelméréstől a részlettervig követhető legyen a mérnöki út.",
       contactLead: "Írj röviden a helyszínről, a szerkezetről vagy a tervezési fázisról, és a ValidPlan innen építi tovább a műszaki irányt."
+    },
+    about: {
+      eyebrow: "Rólunk",
+      title: "ValidPlan Kft. - mérnöki létesítmények tervezése",
+      profileAlt: "Bodor Dániel, a ValidPlan Kft. tulajdonosa és ügyvezetője",
+      profileEyebrow: "Céges profil",
+      profileTitle: "ValidPlan Kft. - mérnöki létesítmények tervezése",
+      profileCopy: "A ValidPlan Kft. 2022 júliusában jött létre. Tulajdonosa és ügyvezetője Bodor Dániel okleveles építőmérnök. A cég közúti hidak komplett tervdokumentációjának elkészítésével foglalkozik tanulmánytervi, engedélyezési, kiviteli és megvalósulási tervfázisokban.",
+      fact1: {
+        label: "Profil",
+        value: "Hidak, támfalak, mérnöki és magasépítési szerkezetek"
+      },
+      fact2: {
+        label: "Módszer",
+        value: "BIM-szemléletű munkafolyamatok és korszerű tervezőszoftverek"
+      },
+      fact3: {
+        label: "Elérhetőség",
+        value: "validplankft@gmail.com · +36 30 594 1881"
+      },
+      scopeEyebrow: "Céges profil",
+      scopeTitle: "Tervfázistól a kivitelezhető dokumentációig",
+      scope1: {
+        title: "Közúti és kerékpáros hidak",
+        copy: "Komplett tervdokumentáció tanulmánytervi, engedélyezési, kiviteli és megvalósulási tervfázisokban."
+      },
+      scope2: {
+        title: "Mérnöki szerkezetek",
+        copy: "Támfalak, meglévő hidak felújítása, magasépítési szerkezetek és kapcsolódó műtárgyak tervezése."
+      },
+      scope3: {
+        title: "Közlekedési környezet",
+        copy: "Kerékpárutak, alsóbbrendű közutak felújítási munkái és forgalomtechnikai tervezési feladatok."
+      },
+      referencesEyebrow: "Releváns referenciák",
+      referencesTitle: "Kiemelt munkák a cégismertető alapján",
+      reference1: "27. sz. főút, Szendrőládi Bódva-híd átépítése - kiviteli tervezés, 2022.",
+      reference2: "Petőháza-Fertőd kerékpárút, 2 db kerékpáros műtárgy engedélyezési és kiviteli tervezése, 2022.",
+      reference3: "Bokod-Oroszlány kerékpárút, 1 db kerékpáros műtárgy engedélyezési tervezése, 2022.",
+      reference4: "Baja, Sportuszoda és élményfürdő gyalogos műtárgy kiviteli tervei, 2023.",
+      reference5: "Miskolc, 3. sz. főút feletti híd átépítése - kiviteli tervezés, 2024."
     },
     building: {
       eyebrow: "Magasépítés",
@@ -325,10 +367,52 @@ const translations = {
     },
     page: {
       expertiseLead: "ValidPlan treats structural logic, buildable details and clear documentation as one connected design system.",
+      aboutLead: "ValidPlan Kft. prepares bridge, civil-structure and building documentation with transparent, buildable engineering logic.",
       buildingLead: "The building design page focuses on structural thinking, documented decisions and details that remain buildable on site.",
       bridgesLead: "The bridge page separates the structural situations where concept design, calculations and buildable details can be developed.",
       processLead: "The process page clarifies the project decision points, making the engineering route traceable from survey to detailed design.",
       contactLead: "Send a short note about the site, the structure or the design stage, and ValidPlan will build the technical direction from there."
+    },
+    about: {
+      eyebrow: "About",
+      title: "ValidPlan Kft. - engineering structures and building design",
+      profileAlt: "Bodor Daniel, owner and managing director of ValidPlan Kft.",
+      profileEyebrow: "Company profile",
+      profileTitle: "ValidPlan Kft. - engineering structures and building design",
+      profileCopy: "ValidPlan Kft. was founded in July 2022. Its owner and managing director is Bodor Daniel, a certified civil engineer. The company prepares complete design documentation for road bridges across study, permit, construction and as-built design phases.",
+      fact1: {
+        label: "Profile",
+        value: "Bridges, retaining walls, civil structures and building structures"
+      },
+      fact2: {
+        label: "Method",
+        value: "BIM-oriented workflows and modern design software"
+      },
+      fact3: {
+        label: "Contact",
+        value: "validplankft@gmail.com · +36 30 594 1881"
+      },
+      scopeEyebrow: "Company profile",
+      scopeTitle: "From design phase to buildable documentation",
+      scope1: {
+        title: "Road and cycle bridges",
+        copy: "Complete design documentation across study, permit, construction and as-built design phases."
+      },
+      scope2: {
+        title: "Engineering structures",
+        copy: "Design of retaining walls, existing bridge renovations, building structures and related civil works."
+      },
+      scope3: {
+        title: "Transport environment",
+        copy: "Cycle routes, lower-order road renovation works and traffic engineering design tasks."
+      },
+      referencesEyebrow: "Relevant references",
+      referencesTitle: "Selected work based on the company profile",
+      reference1: "Road 27, reconstruction of the Bódva bridge at Szendrőlád - construction design, 2022.",
+      reference2: "Petőháza-Fertőd cycle route, permit and construction design of two cycling structures, 2022.",
+      reference3: "Bokod-Oroszlány cycle route, permit design of one cycling structure, 2022.",
+      reference4: "Baja, pedestrian structure designs for the sports pool and adventure bath, 2023.",
+      reference5: "Miskolc, reconstruction of the bridge over Road 3 - construction design, 2024."
     },
     building: {
       eyebrow: "Building design",
@@ -552,10 +636,52 @@ const translations = {
     },
     page: {
       expertiseLead: "ValidPlan behandelt Tragwerkslogik, ausführbare Details und klare Dokumentation als ein zusammenhängendes Planungssystem.",
+      aboutLead: "ValidPlan Kft. erstellt Planunterlagen für Brücken, Ingenieurbauwerke und Hochbaukonstruktionen mit nachvollziehbarer, ausführbarer Ingenieurlogik.",
       buildingLead: "Die Hochbau-Seite stellt Tragwerksdenken, dokumentierte Entscheidungen und ausführbare Details in den Mittelpunkt.",
       bridgesLead: "Die Brückenseite zeigt getrennt, für welche Tragwerkssituationen Konzept, Statik und ausführbare Details entstehen können.",
       processLead: "Die Ablaufseite trennt die Entscheidungspunkte des Projekts, damit der Planungsweg von der Aufnahme bis zur Detailplanung nachvollziehbar bleibt.",
       contactLead: "Schreiben Sie kurz zu Standort, Bauwerk oder Planungsphase, und ValidPlan entwickelt daraus die technische Richtung weiter."
+    },
+    about: {
+      eyebrow: "Über uns",
+      title: "ValidPlan Kft. - Planung von Ingenieurbauwerken",
+      profileAlt: "Bodor Daniel, Eigentümer und Geschäftsführer der ValidPlan Kft.",
+      profileEyebrow: "Unternehmensprofil",
+      profileTitle: "ValidPlan Kft. - Planung von Ingenieurbauwerken",
+      profileCopy: "Die ValidPlan Kft. wurde im Juli 2022 gegründet. Eigentümer und Geschäftsführer ist Bodor Daniel, Diplom-Bauingenieur. Das Unternehmen erstellt komplette Planunterlagen für Straßenbrücken in Studien-, Genehmigungs-, Ausführungs- und Bestandsplanungsphasen.",
+      fact1: {
+        label: "Profil",
+        value: "Brücken, Stützwände, Ingenieur- und Hochbaukonstruktionen"
+      },
+      fact2: {
+        label: "Methode",
+        value: "BIM-orientierte Arbeitsprozesse und moderne Planungssoftware"
+      },
+      fact3: {
+        label: "Kontakt",
+        value: "validplankft@gmail.com · +36 30 594 1881"
+      },
+      scopeEyebrow: "Unternehmensprofil",
+      scopeTitle: "Von der Planungsphase bis zur ausführbaren Dokumentation",
+      scope1: {
+        title: "Straßen- und Radwegbrücken",
+        copy: "Komplette Planunterlagen in Studien-, Genehmigungs-, Ausführungs- und Bestandsplanungsphasen."
+      },
+      scope2: {
+        title: "Ingenieurbauwerke",
+        copy: "Planung von Stützwänden, Sanierung bestehender Brücken, Hochbaukonstruktionen und zugehörigen Bauwerken."
+      },
+      scope3: {
+        title: "Verkehrsumfeld",
+        copy: "Radwege, Sanierungen von Nebenstraßen und verkehrstechnische Planungsaufgaben."
+      },
+      referencesEyebrow: "Relevante Referenzen",
+      referencesTitle: "Ausgewählte Arbeiten auf Basis des Unternehmensprofils",
+      reference1: "Straße 27, Umbau der Bódva-Brücke bei Szendrőlád - Ausführungsplanung, 2022.",
+      reference2: "Radweg Petőháza-Fertőd, Genehmigungs- und Ausführungsplanung von zwei Radwegbauwerken, 2022.",
+      reference3: "Radweg Bokod-Oroszlány, Genehmigungsplanung eines Radwegbauwerks, 2022.",
+      reference4: "Baja, Fußgängerbauwerk für Sportbad und Erlebnisbad - Ausführungspläne, 2023.",
+      reference5: "Miskolc, Umbau der Brücke über die Straße 3 - Ausführungsplanung, 2024."
     },
     building: {
       eyebrow: "Hochbau",
