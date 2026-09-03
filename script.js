@@ -1056,9 +1056,9 @@ function initializeBridgeViewer() {
   const materialList = document.querySelector("[data-bridge-materials]");
   const zoomSlider = viewer.querySelector("[data-bridge-zoom-slider]");
   const zoomButtons = viewer.querySelectorAll("[data-bridge-zoom]");
-  let rotationX = -18;
-  let rotationY = -28;
-  let zoom = 1;
+  let rotationX = -10;
+  let rotationY = -18;
+  let zoom = 1.28;
   let isDragging = false;
   const activePointers = new Map();
   let previousPinchDistance = 0;
@@ -1078,7 +1078,7 @@ function initializeBridgeViewer() {
   };
 
   const setZoom = (value) => {
-    zoom = Math.max(0.72, Math.min(1.95, value));
+    zoom = Math.max(0.6, Math.min(2.9, value));
     if (zoomSlider) zoomSlider.value = zoom.toFixed(2);
     applyRotation();
   };
@@ -1132,6 +1132,16 @@ function initializeBridgeViewer() {
     const match = color.match(/\d+/g);
     if (!match) return [0.56, 0.64, 0.72];
     return match.slice(0, 3).map((value) => Math.max(0, Math.min(1, Number(value) / 255)));
+  };
+
+  const displayMaterialColor = (materialName, materialInfo) => {
+    const name = materialName.toLowerCase();
+    if (name.includes("asphalt")) return "rgb(102, 107, 104)";
+    if (name.includes("dark gray")) return "rgb(80, 86, 84)";
+    if (name.includes("steel")) return "rgb(205, 211, 209)";
+    if (name.includes("concrete")) return "rgb(158, 164, 160)";
+    if (name.includes("material_not_defined")) return "rgb(128, 134, 132)";
+    return materialInfo?.color || "rgb(150, 156, 154)";
   };
 
   const multiplyMatrix = (a, b) => {
@@ -1211,9 +1221,9 @@ function initializeBridgeViewer() {
       varying float vFacing;
       void main() {
         vec3 normal = normalize((uNormalMatrix * vec4(aNormal, 0.0)).xyz);
-        vec3 lightDir = normalize(vec3(-0.42, 0.76, 0.5));
+        vec3 lightDir = normalize(vec3(-0.34, 0.88, 0.44));
         float light = max(dot(normal, lightDir), 0.0);
-        vLight = 0.48 + light * 0.78;
+        vLight = 0.62 + light * 0.58;
         vFacing = abs(normal.z);
         vColor = aColor;
         gl_Position = uMatrix * vec4(aPosition, 1.0);
@@ -1225,7 +1235,7 @@ function initializeBridgeViewer() {
       varying float vLight;
       varying float vFacing;
       void main() {
-        vec3 rim = vec3(0.07, 0.12, 0.17) * (1.0 - vFacing) * 0.42;
+        vec3 rim = vec3(0.18, 0.20, 0.19) * (1.0 - vFacing) * 0.18;
         vec3 color = vColor * vLight + rim;
         gl_FragColor = vec4(color, 1.0);
       }
@@ -1262,7 +1272,7 @@ function initializeBridgeViewer() {
 
     model.materials.forEach((material) => {
       const materialInfo = materialMap.get(material.name);
-      const base = colorToArray(materialInfo?.color || (material.name.includes("Steel") ? "rgb(110, 116, 124)" : "rgb(136, 142, 148)"));
+      const base = colorToArray(displayMaterialColor(material.name, materialInfo));
       material.faces.forEach(([a, b, c]) => {
         const pa = model.vertices[a];
         const pb = model.vertices[b];
@@ -1306,13 +1316,13 @@ function initializeBridgeViewer() {
     gl.enable(gl.BLEND);
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
     gl.disable(gl.CULL_FACE);
-    gl.clearColor(0.01, 0.06, 0.15, 0.04);
+    gl.clearColor(0.94, 0.96, 0.95, 1);
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
     gl.useProgram(webglProgram.program);
 
     const aspect = canvas.width / Math.max(1, canvas.height);
-    const projection = perspectiveMatrix((38 * Math.PI) / 180, aspect, 0.08, 100);
-    const translate = translationMatrix(0, -0.1, -7.15 / zoom);
+    const projection = perspectiveMatrix((32 * Math.PI) / 180, aspect, 0.08, 100);
+    const translate = translationMatrix(0, -0.06, -5.65 / zoom);
     const rotateX = rotationXMatrix((rotationX * Math.PI) / 180);
     const rotateY = rotationYMatrix((rotationY * Math.PI) / 180);
     const view = multiplyMatrix(translate, multiplyMatrix(rotateX, rotateY));
@@ -1373,7 +1383,7 @@ function initializeBridgeViewer() {
     const triangles = [];
     model.materials.forEach((material) => {
       const materialInfo = materialMap.get(material.name);
-      const baseColor = materialInfo?.color || (material.name.includes("Steel") ? "rgb(92, 92, 92)" : "rgb(120, 120, 120)");
+      const baseColor = displayMaterialColor(material.name, materialInfo);
       material.faces.forEach(([a, b, c]) => {
         const pa = projected[a];
         const pb = projected[b];
