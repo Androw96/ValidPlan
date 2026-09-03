@@ -4247,6 +4247,46 @@ html[lang="de"] .page-hero h1 {
   font-weight: 900;
 }
 
+.site-footer {
+  width: min(100% - 32px, 1180px);
+  margin: 0 auto 28px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid rgba(209, 235, 255, 0.28);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(8, 58, 112, 0.34), rgba(0, 120, 255, 0.14)),
+    rgba(4, 28, 58, 0.18);
+  box-shadow: 0 16px 42px rgba(0, 22, 58, 0.18);
+  color: rgba(233, 247, 255, 0.78);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.site-footer a {
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+}
+
+.site-footer a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9), transparent);
+}
+
+.site-footer a:hover {
+  color: #d9efff;
+}
+
 @media (max-width: 820px) {
   .reference-card-featured,
   .reference-grid {
