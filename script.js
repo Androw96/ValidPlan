@@ -1316,7 +1316,7 @@ function initializeBridgeViewer() {
     gl.enable(gl.BLEND);
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
     gl.disable(gl.CULL_FACE);
-    gl.clearColor(0.94, 0.96, 0.95, 1);
+    gl.clearColor(0, 0, 0, 0);
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
     gl.useProgram(webglProgram.program);
 
@@ -1357,7 +1357,7 @@ function initializeBridgeViewer() {
     const width = canvas.clientWidth;
     const height = canvas.clientHeight;
     context.clearRect(0, 0, width, height);
-    context.fillStyle = "rgba(1, 17, 44, 0.34)";
+    context.fillStyle = "rgba(232, 242, 247, 0.18)";
     context.fillRect(0, 0, width, height);
 
     const rx = (rotationX * Math.PI) / 180;
